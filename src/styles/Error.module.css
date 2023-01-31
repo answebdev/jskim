@@ -1,0 +1,134 @@
+.Success {
+  text-align: center;
+  color: var(--primaryDark);
+}
+
+.AppLogo {
+  /* height: 40vmin; */
+  height: 35vmin;
+  pointer-events: none;
+}
+
+.AppHeader {
+  letter-spacing: 1.5px;
+  background-color: var(--primaryDark);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.MainDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.PageNotFound {
+  font-weight: 700;
+}
+
+.Message {
+  text-align: center;
+  font-size: 20px;
+}
+
+.Safety {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  padding: 6px 12px;
+  background: transparent;
+  color: #ffffff;
+  width: 150px;
+  height: 35px;
+  border-style: solid;
+  border-radius: 0;
+  font-size: 15px;
+  text-transform: uppercase;
+}
+
+.Safety:hover {
+  background-color: #ffffff;
+  transition-duration: 0.5s;
+  color: var(--primaryDark);
+  border-color: var(--primaryDark);
+  outline: none;
+}
+
+/* ===== MEDIA QUERIES ===== */
+
+@media screen and (min-width: 981px) and (max-width: 1200px) {
+  /* body {
+      background-color: red;
+    } */
+}
+
+@media screen and (min-width: 769px) and (max-width: 980px) {
+  /* body {
+    background-color: yellow;
+  } */
+}
+
+@media screen and (min-width: 641px) and (max-width: 768px) {
+  /* body {
+    background-color: steelblue;
+  } */
+}
+
+@media screen and (min-width: 551px) and (max-width: 640px) {
+  /* body {
+    background-color: brown;
+  } */
+}
+
+@media screen and (min-width: 471px) and (max-width: 550px) {
+  /* body {
+    background-color: salmon;
+  } */
+}
+
+@media screen and (min-width: 431px) and (max-width: 470px) {
+  /* body {
+    background-color: black;
+  } */
+}
+
+@media screen and (min-width: 401px) and (max-width: 430px) {
+  /* body {
+    background-color: burlywood;
+  } */
+  .PageNotFound {
+    font-size: 18px;
+  }
+
+  .Message {
+    font-size: 16px;
+  }
+
+  .Safety {
+    font-size: 11px;
+  }
+}
+
+@media screen and (min-width: 100px) and (max-width: 400px) {
+  /* body {
+    background-color: pink;
+  } */
+
+  .PageNotFound {
+    font-size: 18px;
+  }
+
+  .Message {
+    font-size: 16px;
+  }
+
+  .Safety {
+    font-size: 11px;
+  }
+}

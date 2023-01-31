@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Jisun Kim | Success</title>
+    <link rel="icon" href="dev-logo.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font Awesome link -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+        integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Material Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!-- Link to Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+    <!-- Link to React Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+</head>
+
+<style>
+    html,
+    body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        display: grid;
+        height: 90%;
+
+    }
+
+    body {
+        font-family: 'Karla', sans-serif;
+        background-color: #ffffff;
+        color: #232023;
+    }
+
+    header {
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    p {
+        font-size: 20px;
+    }
+
+    #success-msg {
+        margin: auto;
+    }
+
+    #back-div {
+        text-align: center;
+    }
+
+    #thumb {
+        margin-top: 1.5em;
+    }
+
+    .material-icons {
+        font-size: 6rem;
+        margin-bottom: 2rem;
+        animation: swing 0.75s ease;
+        animation-duration: 0.75s;
+        animation-timing-function: ease;
+        animation-delay: 0s;
+        animation-iteration-count: 1;
+        animation-direction: normal;
+        animation-fill-mode: none;
+        animation-play-state: running;
+        animation-name: swing;
+        animation-iteration-count: 1;
+    }
+
+    h3 {
+        font-weight: 700;
+        text-align: center;
+    }
+
+    .description {
+        font-size: 1.2rem;
+        letter-spacing: 1.5px;
+        font-family: 'Karla', sans-serif;
+    }
+
+    #back-btn {
+        letter-spacing: 1px;
+        justify-content: center;
+        align-items: center;
+        margin-right: 8px;
+        text-decoration: none;
+        padding: 10px 16px;
+        background: transparent;
+        color: #232023;
+        width: 150px;
+        height: 35px;
+        border-style: solid;
+        border-radius: 0.25rem;
+        font-size: 15px;
+        text-transform: uppercase;
+        margin-top: 20px;
+        border: 1px solid #232023;
+    }
+
+    #back-btn:hover,
+    #back-btn:focus {
+        background-color: #232023;
+        transition-duration: 0.5s;
+        color: #ffffff;
+        border-color: #232023;
+        outline: none;
+    }
+</style>
+
+<body>
+    <div class="content">
+        <div class="container">
+            <header>
+                <span class="animate__animated animate__swing">
+                    <i class="material-icons" id="thumb">thumb_up</i>
+                </span>
+                <h3>THANK YOU!</h3>
+                <p class="description">Your message has been sent.</p>
+
+                <br />
+
+                <a href="/contact" id="back-btn" role="button" aria-pressed="true"><i class="fas fa-arrow-left"
+                        onclick="history.back()"></i> BACK TO FORM
+                </a>
+
+            </header>
+        </div>
+    </div>
+
+</body>
+
+</html>

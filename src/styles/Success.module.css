@@ -1,0 +1,74 @@
+.Error {
+  text-align: center;
+}
+
+.AppHeader {
+  letter-spacing: 1.5px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: var(--primaryDark);
+}
+
+.HeaderText {
+  font-family: var(--primaryFontFamily);
+  font-weight: 700;
+}
+
+.Description {
+  font-size: 1.2rem;
+  letter-spacing: 1.5px;
+
+  /* text-transform: uppercase; */
+  font-family: var(--primaryFontFamily);
+}
+
+.Button {
+  letter-spacing: 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 8px;
+  text-decoration: none;
+  padding: 6px 12px;
+  background: transparent;
+  color: var(--primaryDark);
+  width: 150px;
+  height: 35px;
+  border-style: solid;
+  /* border-radius: 0; */
+  border-radius: 0.25rem;
+  font-size: 15px;
+  text-transform: uppercase;
+  margin-top: 20px;
+
+  border: 1px solid var(--primaryDark);
+}
+
+.Button:hover,
+.Button:focus {
+  background-color: var(--primaryDark);
+  transition-duration: 0.5s;
+  color: #ffffff;
+  border-color: var(--primaryDark);
+  outline: none;
+}
+
+.Icon,
+.material-icons {
+  font-size: 6rem;
+  margin: 0 0.5rem;
+  animation: swing 0.75s ease;
+  animation-duration: 0.75s;
+  animation-timing-function: ease;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: none;
+  animation-play-state: running;
+  animation-name: swing;
+  animation-iteration-count: 1;
+}

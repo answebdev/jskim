@@ -1,0 +1,147 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.Container {
+  width: 75%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.Landing {
+  position: relative;
+  z-index: 1;
+  color: #ffffff;
+}
+
+.LandingFlex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: max(100vh, 35rem);
+}
+
+.Bg {
+  position: absolute;
+  background-image: url('../img/jisun3.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: max(100vh, 35rem);
+  width: 100%;
+  z-index: -1;
+}
+
+.Bg::before {
+  content: '';
+  position: absolute;
+  height: max(100vh, 35rem);
+  width: 100%;
+  /* background-color: rgba(0, 0, 0, 0.5); */
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.Title {
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-family: var(--primaryFontFamily);
+}
+
+.Description {
+  font-size: 1.2rem;
+  letter-spacing: 1.5px;
+  width: 50%;
+  margin-bottom: 1em;
+  /* text-transform: uppercase; */
+  font-family: var(--primaryFontFamily);
+}
+
+.ButtonContainer {
+  display: flex;
+}
+
+.Button {
+  /* display: inline-block;
+  width: min-content;
+  border: 0;
+  padding: 0.5em 1em;
+  font-size: 1.2rem;
+  text-align: center;
+  border-radius: 0.4em; */
+  letter-spacing: 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 8px;
+  text-decoration: none;
+  padding: 6px 12px;
+  background: transparent;
+  color: #ffffff;
+  width: 150px;
+  height: 35px;
+  border-style: solid;
+  border-radius: 0;
+  /* border-radius: 0.25rem; */
+  font-size: 15px;
+  text-transform: uppercase;
+}
+
+.Button:hover,
+.Button:focus {
+  /* opacity: 0.6; */
+
+  background-color: #ffffff;
+  transition-duration: 0.5s;
+  color: var(--primaryDark);
+  border-color: #ffffff;
+  outline: none;
+}
+
+/* ========== MEDIA QUERIES ========== */
+@media (max-width: 650px) {
+  .landing-title,
+  .Description {
+    width: 100%;
+    text-align: center;
+  }
+
+  .LandingFlex {
+    display: flex;
+    align-items: center;
+  }
+
+  .Title {
+    font-size: 2.5rem;
+  }
+
+  .Description {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 450px) {
+  .Container {
+    width: 90%;
+  }
+
+  /* .section-subheading {
+      width: 100%;
+    }
+    .feature-card {
+      width: 15rem;
+      border-radius: 1.5em;
+    }
+    .feature-title {
+      top: -7%;
+      padding: 0.5em 2em;
+    } */
+}
+
+@media (max-width: 300px) {
+  .Title {
+    font-size: 48px;
+  }
+}

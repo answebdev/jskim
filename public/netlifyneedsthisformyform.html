@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link to Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+    <title>Jisun Kim | Contact</title>
+</head>
+
+<body>
+
+    <div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3"></div>
+                <div class="col-md-6">
+                    <h3>Contact Form</h3>
+                    <hr />
+                    <p>
+                        Jisun Kim is available for shoots. Contact about bookings or just to drop a friendly line.
+                    </p>
+                    <form action='/success.html' name="jisun-portfolio-contact-form" method="POST" data-netlify="true">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Name</label>
+                            <input type="hidden" name="name" placeholder="Name" class="form-control"
+                                id="exampleInputEmail1" aria-describedby="emailHelp" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Email Address</label>
+                            <input class="form-control" id="exampleInputPassword1" type="email" name="email"
+                                placeholder="email@example.com" required>
+                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                                else.</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlTextarea1">Message</label>
+                            <textarea name="message" class="form-control" id="exampleFormControlTextarea1" rows="5"
+                                required></textarea>
+                        </div>
+                        <div class="field">
+                            <div data-netlify-recaptcha="true"></div>
+                        </div>
+                        <button class="actions" type="submit" class="btn btn-primary" id='submit-btn'
+                            value='Send Message' id='submit-btn'>Send
+                            Message
+                        </button>
+                    </form>
+
+                    <div class="col-md-3"></div>
+                    </Row>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

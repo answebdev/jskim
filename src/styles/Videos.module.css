@@ -1,0 +1,284 @@
+.Container {
+  padding: 6em;
+  color: var(--primaryDark);
+}
+
+.LeadTitle {
+  margin-top: 1em;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-family: var(--primaryFontFamily);
+}
+
+.MainText {
+  line-height: 1.6;
+}
+
+.Wrapper {
+  width: 100%;
+  height: 520px;
+}
+
+.Slider {
+  white-space: nowrap;
+  overflow: auto;
+}
+
+.SliderVideo {
+  width: 30%;
+  height: auto;
+  margin: 4px;
+}
+
+.FirstSliderVideo {
+  width: 30%;
+  height: auto;
+  margin-right: 4px;
+}
+
+.LastSliderVideo {
+  width: 30%;
+  height: auto;
+  margin-left: 4px;
+}
+/* ===== MEDIA QUERIES ===== */
+
+@media screen and (min-width: 981px) and (max-width: 1200px) {
+  /* body {
+    background-color: red;
+  } */
+
+  .SliderVideo {
+    width: 35%;
+    height: auto;
+    margin: 4px;
+  }
+
+  .FirstSliderVideo {
+    width: 35%;
+    height: auto;
+    margin-right: 4px;
+  }
+
+  .LastSliderVideo {
+    width: 35%;
+    height: auto;
+    margin-left: 4px;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 980px) {
+  /* body {
+    background-color: yellow;
+  } */
+
+  .SliderVideo {
+    width: 45%;
+    height: auto;
+    margin: 4px;
+  }
+
+  .FirstSliderVideo {
+    width: 45%;
+    height: auto;
+    margin-right: 4px;
+  }
+
+  .LastSliderVideo {
+    width: 45%;
+    height: auto;
+    margin-left: 4px;
+  }
+}
+
+@media screen and (min-width: 641px) and (max-width: 768px) {
+  /* body {
+    background-color: steelblue;
+  } */
+
+  .LeadTitle {
+    padding-top: 2em;
+  }
+
+  .Container {
+    padding: 6em;
+  }
+
+  .SliderVideo {
+    width: 50%;
+    height: auto;
+    margin: 4px;
+  }
+
+  .FirstSliderVideo {
+    width: 50%;
+    height: auto;
+    margin-right: 4px;
+  }
+
+  .LastSliderVideo {
+    width: 50%;
+    height: auto;
+    margin-left: 4px;
+  }
+}
+
+@media screen and (min-width: 551px) and (max-width: 640px) {
+  /* body {
+    background-color: brown;
+  } */
+
+  .LeadTitle {
+    padding-top: 2em;
+  }
+
+  .Container {
+    padding: 6em;
+  }
+
+  .SliderVideo {
+    width: 65%;
+    height: auto;
+    margin: 4px;
+  }
+
+  .FirstSliderVideo {
+    width: 65%;
+    height: auto;
+    margin-right: 4px;
+  }
+
+  .LastSliderVideo {
+    width: 65%;
+    height: auto;
+    margin-left: 4px;
+  }
+}
+
+@media screen and (min-width: 471px) and (max-width: 550px) {
+  /* body {
+    background-color: salmon;
+  } */
+
+  .Container {
+    padding: 6em 4em 4em 4em;
+  }
+
+  .LeadTitle {
+    padding-top: 3em;
+  }
+
+  .SliderVideo {
+    width: 65%;
+    height: auto;
+    margin: 4px;
+  }
+
+  .FirstSliderVideo {
+    width: 65%;
+    height: auto;
+    margin-right: 4px;
+  }
+
+  .LastSliderVideo {
+    width: 65%;
+    height: auto;
+    margin-left: 4px;
+  }
+}
+
+@media screen and (min-width: 431px) and (max-width: 470px) {
+  /* body {
+    background-color: black;
+  } */
+
+  .Container {
+    padding: 6em 4em 4em 4em;
+  }
+
+  .LeadTitle {
+    padding-top: 3em;
+  }
+
+  .SliderVideo {
+    width: 75%;
+    height: auto;
+    margin: 4px;
+  }
+
+  .FirstSliderVideo {
+    width: 75%;
+    height: auto;
+    margin-right: 4px;
+  }
+
+  .LastSliderVideo {
+    width: 75%;
+    height: auto;
+    margin-left: 4px;
+  }
+}
+
+@media screen and (min-width: 401px) and (max-width: 430px) {
+  /* body {
+    background-color: burlywood;
+  } */
+
+  .Container {
+    padding: 6em 4em 4em 4em;
+  }
+
+  .LeadTitle {
+    padding-top: 3em;
+  }
+
+  .SliderVideo {
+    width: 100%;
+    height: auto;
+    margin: 4px;
+  }
+
+  .FirstSliderVideo {
+    width: 100%;
+    height: auto;
+    margin-right: 4px;
+  }
+
+  .LastSliderVideo {
+    width: 100%;
+    height: auto;
+    margin-left: 4px;
+  }
+}
+
+@media screen and (min-width: 100px) and (max-width: 400px) {
+  /* body {
+    background-color: pink;
+  } */
+
+  .Container {
+    padding: 6em 4em 4em 4em;
+  }
+
+  .LeadTitle {
+    padding-top: 3em;
+  }
+
+  .SliderVideo {
+    width: 100%;
+    height: auto;
+    margin: 4px;
+  }
+
+  .FirstSliderVideo {
+    width: 100%;
+    height: auto;
+    margin-right: 4px;
+  }
+
+  .LastSliderVideo {
+    width: 100%;
+    height: auto;
+    margin-left: 4px;
+  }
+}
