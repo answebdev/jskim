@@ -44,17 +44,9 @@ const Contact = () => {
                 use the form or contact by email at&nbsp;
                 <a href='mailto:adolf.schmuck@gmail.com'>example@gmail.com</a>.
               </p>
-              {/* <p>
-                Jisun Kim is available for shoots. Contact about bookings or
-                just to drop a friendly line.
-              </p> */}
-              {/* <p>
-                Use the form or contact me by email at{' '}
-                <a href='mailto:adolf.schmuck@gmail.com'>example@gmail.com</a>
-              </p> */}
               <Form
                 action='/success'
-                name='jisun-portfolio-contact-form'
+                name='jisun-kim-contact-form'
                 method='POST'
                 data-netlify='true'
               >
