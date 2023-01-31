@@ -14,12 +14,12 @@ function urlFor(source) {
 }
 
 const About = () => {
-  const [allPostsData, setAllPosts] = useState(null);
+  const [allData, setAllData] = useState(null);
 
   useEffect(() => {
     sanityClient
       .fetch(
-        `*[_type == "post"]{
+        `*[_type == "about"]{
         bio,
         image,
         mainImage{
@@ -30,7 +30,7 @@ const About = () => {
       }
     }`
       )
-      .then((data) => setAllPosts(data))
+      .then((data) => setAllData(data))
       .catch(console.error);
   }, []);
 
@@ -52,11 +52,11 @@ const About = () => {
           {/* <Col  md={5}> */}
           <Col lg={5} md={12}>
             <p className={classes.SubTitle}>Seoul, Korea</p>
-            {allPostsData &&
-              allPostsData.map((post, index) => (
+            {allData &&
+              allData.map((item, index) => (
                 <div key={index} className={classes.MainText}>
                   <BlockContent
-                    blocks={post.bio}
+                    blocks={item.bio}
                     projectId={sanityClient.clientConfig.projectId}
                     dataset={sanityClient.clientConfig.dataset}
                   />
@@ -71,13 +71,13 @@ const About = () => {
           <Col lg={6} md={12}>
             {/* <Image className={classes.MainImage} src={hk} fluid /> */}
 
-            {allPostsData &&
-              allPostsData.map((post, index) => {
+            {allData &&
+              allData.map((item, index) => {
                 return (
                   <div key={index}>
                     <Image
                       className={classes.MainImage}
-                      src={urlFor(post.mainImage).url()}
+                      src={urlFor(item.mainImage).url()}
                       alt='Jisun Kim'
                       fluid
                     />
