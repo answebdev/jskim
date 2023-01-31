@@ -31,13 +31,6 @@ const Contact = () => {
           </Col>
 
           <Col lg={7} md={12}>
-            {/* <h3>
-              <strong>Contact</strong>
-            </h3> */}
-            {/* <h3 className={classes.LeadTitle}>
-              <strong>Contact</strong>
-            </h3> */}
-            {/* <hr /> */}
             <div className={classes.LeadText}>
               <p>
                 Jisun Kim is available for shoots. To contact about bookings,
@@ -53,7 +46,7 @@ const Contact = () => {
                 <input
                   type='hidden'
                   name='form-name'
-                  value='jisun-portfolio-contact-form'
+                  value='jisun-kim-contact-form'
                 />
                 <Form.Group>
                   <Form.Label>Name</Form.Label>
@@ -94,9 +87,7 @@ const Contact = () => {
                   <div data-netlify-recaptcha='true'></div>
                 </div>
                 <button
-                  // className='actions'
                   className={`${classes.Button} ${'actions'}`}
-                  // variant='success'
                   type='submit'
                   value='Send Message'
                   id='submit-btn'
