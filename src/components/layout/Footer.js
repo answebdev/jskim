@@ -4,7 +4,7 @@ const Footer = () => (
   <div className='footer'>
     <div className={classes.Footer}>
       <span className={classes.FooterText}>
-        &copy; Copyright 2022 Jisun Kim
+        &copy; Copyright {new Date().getFullYear()} Jisun Kim
       </span>
       {/* <span className={classes.FooterText}>
         &copy; {new Date().getFullYear()} Jisun Kim | Website by{' '}

@@ -1,9 +1,39 @@
+import React, { useState, useEffect } from 'react';
+// import { Link } from 'react-router-dom';
+import sanityClient from '../../client.js';
+import imageUrlBuilder from '@sanity/image-url';
+import BlockContent from '@sanity/block-content-to-react';
 import { Helmet } from 'react-helmet';
 import { Row, Col, Image } from 'react-bootstrap';
-import hk from '../../img/hk.jpg';
+// import hk from '../../img/hk.jpg';
 import classes from '../../styles/About.module.css';
 
+const builder = imageUrlBuilder(sanityClient);
+function urlFor(source) {
+  return builder.image(source);
+}
+
 const About = () => {
+  const [allPostsData, setAllPosts] = useState(null);
+
+  useEffect(() => {
+    sanityClient
+      .fetch(
+        `*[_type == "post"]{
+        bio,
+        image,
+        mainImage{
+          asset->{
+          _id,
+          url
+        }
+      }
+    }`
+      )
+      .then((data) => setAllPosts(data))
+      .catch(console.error);
+  }, []);
+
   return (
     <div>
       <Helmet>
@@ -22,16 +52,16 @@ const About = () => {
           {/* <Col  md={5}> */}
           <Col lg={5} md={12}>
             <p className={classes.SubTitle}>Seoul, Korea</p>
-            <p className={classes.MainText}>
-              Jisun Kim is a model who dolor sit amet, consectetur adipiscing
-              elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-              aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-              laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-              dolor in reprehenderit in voluptate velit esse cillum dolore eu
-              fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-              proident, sunt in culpa qui officia deserunt mollit anim id est
-              laborum
-            </p>
+            {allPostsData &&
+              allPostsData.map((post, index) => (
+                <div key={index} className={classes.MainText}>
+                  <BlockContent
+                    blocks={post.bio}
+                    projectId={sanityClient.clientConfig.projectId}
+                    dataset={sanityClient.clientConfig.dataset}
+                  />
+                </div>
+              ))}
           </Col>
 
           {/* <Col md={1}></Col> */}
@@ -39,7 +69,21 @@ const About = () => {
 
           {/* <Col md={6}> */}
           <Col lg={6} md={12}>
-            <Image className={classes.MainImage} src={hk} fluid />
+            {/* <Image className={classes.MainImage} src={hk} fluid /> */}
+
+            {allPostsData &&
+              allPostsData.map((post, index) => {
+                return (
+                  <div key={index}>
+                    <Image
+                      className={classes.MainImage}
+                      src={urlFor(post.mainImage).url()}
+                      alt='Jisun Kim'
+                      fluid
+                    />
+                  </div>
+                );
+              })}
           </Col>
         </Row>
       </div>

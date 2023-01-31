@@ -5,25 +5,35 @@ export default defineType({
   title: 'Post',
   type: 'document',
   fields: [
+    // defineField({
+    //   name: 'title',
+    //   title: 'Title',
+    //   type: 'string',
+    // }),
+    // defineField({
+    //   name: 'bio',
+    //   title: 'Bio',
+    //   type: 'string',
+    // }),
+    // defineField({
+    //   name: 'slug',
+    //   title: 'Slug',
+    //   type: 'slug',
+    //   options: {
+    //     source: 'title',
+    //     maxLength: 96,
+    //   },
+    // }),
+    // defineField({
+    //   name: 'author',
+    //   title: 'Author',
+    //   type: 'reference',
+    //   to: {type: 'author'},
+    // }),
     defineField({
-      name: 'title',
-      title: 'Title',
-      type: 'string',
-    }),
-    defineField({
-      name: 'slug',
-      title: 'Slug',
-      type: 'slug',
-      options: {
-        source: 'title',
-        maxLength: 96,
-      },
-    }),
-    defineField({
-      name: 'author',
-      title: 'Author',
-      type: 'reference',
-      to: {type: 'author'},
+      name: 'bio',
+      title: 'Bio',
+      type: 'blockContent',
     }),
     defineField({
       name: 'mainImage',
@@ -33,22 +43,18 @@ export default defineType({
         hotspot: true,
       },
     }),
-    defineField({
-      name: 'categories',
-      title: 'Categories',
-      type: 'array',
-      of: [{type: 'reference', to: {type: 'category'}}],
-    }),
-    defineField({
-      name: 'publishedAt',
-      title: 'Published at',
-      type: 'datetime',
-    }),
-    defineField({
-      name: 'body',
-      title: 'Body',
-      type: 'blockContent',
-    }),
+
+    // defineField({
+    //   name: 'categories',
+    //   title: 'Categories',
+    //   type: 'array',
+    //   of: [{type: 'reference', to: {type: 'category'}}],
+    // }),
+    // defineField({
+    //   name: 'publishedAt',
+    //   title: 'Published at',
+    //   type: 'datetime',
+    // }),
   ],
 
   preview: {
