@@ -1,10 +1,35 @@
+import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet';
 import { Row, Col, Image, Form } from 'react-bootstrap';
+import sanityClient from '../../client.js';
+import imageUrlBuilder from '@sanity/image-url';
 import classes from '../../styles/Contact.module.css';
 
-import h6 from '../../img/h6.png';
+const builder = imageUrlBuilder(sanityClient);
+function urlFor(source) {
+  return builder.image(source);
+}
 
 const Contact = () => {
+  const [data, setData] = useState(null);
+
+  useEffect(() => {
+    sanityClient
+      .fetch(
+        `*[_type == "contact"]{
+        image,
+        contactImage{
+          asset->{
+          _id,
+          url
+        }
+      }
+    }`
+      )
+      .then((data) => setData(data))
+      .catch(console.error);
+  }, []);
+
   return (
     <div>
       <Helmet>
@@ -22,12 +47,26 @@ const Contact = () => {
 
         <Row>
           <Col lg={5} md={12}>
-            <Image
+            {data &&
+              data.map((item, index) => {
+                return (
+                  <div key={index}>
+                    <Image
+                      className={classes.MainImage}
+                      src={urlFor(item.contactImage).url()}
+                      alt='Jisun Kim'
+                      fluid
+                    />
+                  </div>
+                );
+              })}
+
+            {/* <Image
               className={classes.MainImage}
               src={h6}
               alt='Jisun Kim'
               fluid
-            />
+            /> */}
           </Col>
 
           <Col lg={7} md={12}>
