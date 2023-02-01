@@ -52,66 +52,66 @@ function urlFor(source) {
 
 // For fade in effect on scroll (option 3), watch here, but use opacity effect instead of bounce in: https://www.youtube.com/watch?v=hkhskSrT5SY
 
-const IMAGES = [
-  {
-    src: jisun,
-    thumbnail: thumbnail,
-    thumbnailWidth: 320,
-    thumbnailHeight: 174,
-    caption: 'Soho, Central Hong Kong',
-  },
-  {
-    src: jisun2,
-    thumbnail: thumbnail2,
-    thumbnailWidth: 320,
-    thumbnailHeight: 212,
-    caption: 'Hong Kong',
-  },
+// const IMAGES = [
+//   {
+//     src: jisun,
+//     thumbnail: thumbnail,
+//     thumbnailWidth: 320,
+//     thumbnailHeight: 174,
+//     caption: 'Soho, Central Hong Kong',
+//   },
+//   {
+//     src: jisun2,
+//     thumbnail: thumbnail2,
+//     thumbnailWidth: 320,
+//     thumbnailHeight: 212,
+//     caption: 'Hong Kong',
+//   },
 
-  {
-    src: lamarina,
-    thumbnail: lamarinaThumb,
-    thumbnailWidth: 320,
-    thumbnailHeight: 212,
-    caption: 'Central, Hong Kong',
-  },
-  {
-    src: rome,
-    thumbnail: romethumb,
-    thumbnailWidth: 320,
-    thumbnailHeight: 174,
-    caption: 'Rome, Italy',
-  },
-  {
-    src: capetown,
-    thumbnail: capetownthumb,
-    thumbnailWidth: 320,
-    thumbnailHeight: 212,
-    caption: 'Cape Town, South Africa',
-  },
+//   {
+//     src: lamarina,
+//     thumbnail: lamarinaThumb,
+//     thumbnailWidth: 320,
+//     thumbnailHeight: 212,
+//     caption: 'Central, Hong Kong',
+//   },
+//   {
+//     src: rome,
+//     thumbnail: romethumb,
+//     thumbnailWidth: 320,
+//     thumbnailHeight: 174,
+//     caption: 'Rome, Italy',
+//   },
+//   {
+//     src: capetown,
+//     thumbnail: capetownthumb,
+//     thumbnailWidth: 320,
+//     thumbnailHeight: 212,
+//     caption: 'Cape Town, South Africa',
+//   },
 
-  {
-    src: admiraltycentre,
-    thumbnail: admiraltythumb,
-    thumbnailWidth: 320,
-    thumbnailHeight: 212,
-    caption: 'Admiralty Centre, Hong Kong',
-  },
-  {
-    src: hat,
-    thumbnail: hatthumb,
-    thumbnailWidth: 320,
-    thumbnailHeight: 174,
-    caption: 'Hokkaido, Japan',
-  },
-  {
-    src: nuremberg,
-    thumbnail: nurembergthumb,
-    thumbnailWidth: 320,
-    thumbnailHeight: 212,
-    caption: 'Traveling to Nuremberg.',
-  },
-];
+//   {
+//     src: admiraltycentre,
+//     thumbnail: admiraltythumb,
+//     thumbnailWidth: 320,
+//     thumbnailHeight: 212,
+//     caption: 'Admiralty Centre, Hong Kong',
+//   },
+//   {
+//     src: hat,
+//     thumbnail: hatthumb,
+//     thumbnailWidth: 320,
+//     thumbnailHeight: 174,
+//     caption: 'Hokkaido, Japan',
+//   },
+//   {
+//     src: nuremberg,
+//     thumbnail: nurembergthumb,
+//     thumbnailWidth: 320,
+//     thumbnailHeight: 212,
+//     caption: 'Traveling to Nuremberg.',
+//   },
+// ];
 
 const Photos = () => {
   const [imageData, setImageDate] = useState(null);
