@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet';
-import { Row, Col, Image } from 'react-bootstrap';
+import { Row, Col } from 'react-bootstrap';
 import sanityClient from '../../client.js';
 import imageUrlBuilder from '@sanity/image-url';
 import classes from '../../styles/Photos.module.css';
