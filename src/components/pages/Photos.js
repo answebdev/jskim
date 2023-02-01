@@ -23,18 +23,18 @@ import admiraltythumb from '../../img/admiraltythumb.png';
 import hatthumb from '../../img/hatthumb.png';
 import nurembergthumb from '../../img/nurembergthumb.png';
 
-import h1 from '../../img/h1.png';
-import h2 from '../../img/h2.png';
-import h7 from '../../img/h7.png';
+// import h1 from '../../img/h1.png';
+// import h2 from '../../img/h2.png';
+// import h7 from '../../img/h7.png';
 // import h3 from '../../img/h3.png';
 // import h4 from '../../img/h4.png';
 // import h5 from '../../img/h5.png';
 // import h6 from '../../img/h6.png';
 // import h8 from '../../img/h8.png';
 
-import love from '../../img/love.jpg';
+// import love from '../../img/love.jpg';
 
-import Gallery from 'react-grid-gallery';
+// import Gallery from 'react-grid-gallery';
 
 const builder = imageUrlBuilder(sanityClient);
 function urlFor(source) {
