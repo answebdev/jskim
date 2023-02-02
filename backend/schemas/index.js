@@ -1,6 +1,7 @@
 import blockContent from './blockContent'
+import landing from './landing'
 import about from './about'
 import photos from './photos'
 import contact from './contact'
 
-export const schemaTypes = [about, photos, contact, blockContent]
+export const schemaTypes = [landing, about, photos, contact, blockContent]
