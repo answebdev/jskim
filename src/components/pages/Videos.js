@@ -48,7 +48,7 @@ const Videos = () => {
                 >
                   <iframe
                     style={{ overflow: 'hidden' }}
-                    class='embeddedObject shadow resizable'
+                    className='embeddedObject shadow resizable'
                     name='embedded_content'
                     scrolling='no'
                     frameborder='0'
@@ -59,7 +59,7 @@ const Videos = () => {
                     height='450'
                     webkitallowfullscreen
                     mozallowfullscreen
-                    allowfullscreen
+                    allowFullScreen
                     allow='autoplay; fullscreen; picture-in-picture'
                     title='Osaka'
                   ></iframe>
@@ -71,7 +71,7 @@ const Videos = () => {
                 >
                   <iframe
                     style={{ overflow: 'hidden' }}
-                    class='embeddedObject shadow resizable'
+                    className='embeddedObject shadow resizable'
                     name='embedded_content'
                     scrolling='no'
                     frameborder='0'
@@ -81,7 +81,7 @@ const Videos = () => {
                     height='450'
                     webkitallowfullscreen
                     mozallowfullscreen
-                    allowfullscreen
+                    allowFullScreen
                     title='Top Gear Korea'
                   ></iframe>
                 </div>
@@ -92,7 +92,7 @@ const Videos = () => {
                 >
                   <iframe
                     style={{ overflow: 'hidden' }}
-                    class='embeddedObject shadow resizable'
+                    className='embeddedObject shadow resizable'
                     name='embedded_content'
                     scrolling='no'
                     frameborder='0'
@@ -102,7 +102,7 @@ const Videos = () => {
                     height='450'
                     webkitallowfullscreen
                     mozallowfullscreen
-                    allowfullscreen
+                    allowFullScreen
                     title='Standard Chartered Bank 2021 Digital Wealth'
                   ></iframe>
                 </div>
@@ -113,7 +113,7 @@ const Videos = () => {
                 >
                   <iframe
                     style={{ overflow: 'hidden' }}
-                    class='embeddedObject shadow resizable'
+                    className='embeddedObject shadow resizable'
                     name='embedded_content'
                     scrolling='no'
                     frameborder='0'
@@ -124,7 +124,7 @@ const Videos = () => {
                     height='450'
                     webkitallowfullscreen
                     mozallowfullscreen
-                    allowfullscreen
+                    allowFullScreen
                     allow='autoplay; fullscreen; picture-in-picture'
                     title='NS Home Shopping'
                   ></iframe>
@@ -149,7 +149,7 @@ const Videos = () => {
                 src='https://player.vimeo.com/video/691671906?h=f209bb7f99&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479'
                 frameborder='0'
                 allow='autoplay; fullscreen; picture-in-picture'
-                allowfullscreen
+                allowFullScreen
                 style={{
                   position: 'absolute',
                   top: '0',
@@ -169,7 +169,7 @@ const Videos = () => {
                 src='https://player.vimeo.com/video/691665885?h=6caf8c3a7c&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479'
                 frameborder='0'
                 allow='autoplay; fullscreen; picture-in-picture'
-                allowfullscreen
+                allowFullScreen
                 style={{
                   position: 'absolute',
                   top: '0',
@@ -191,7 +191,7 @@ const Videos = () => {
                 src='https://player.vimeo.com/video/691671960?h=bbad3b7566&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479'
                 frameborder='0'
                 allow='autoplay; fullscreen; picture-in-picture'
-                allowfullscreen
+                allowFullScreen
                 style={{
                   position: 'absolute',
                   top: '0',

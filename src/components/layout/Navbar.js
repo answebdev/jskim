@@ -64,7 +64,7 @@ const Navbar = () => (
                 rel='noopener noreferrer'
                 target='_blank'
               >
-                <i class='fa-brands fa-instagram'></i>
+                <i className='fa-brands fa-instagram'></i>
               </a>
             </li>
             <li className={classes.NavbarItem}>
@@ -74,7 +74,7 @@ const Navbar = () => (
                 rel='noopener noreferrer'
                 target='_blank'
               >
-                <i class='fa-brands fa-facebook-square'></i>
+                <i className='fa-brands fa-facebook-square'></i>
               </a>
             </li>
             <li className={classes.NavbarItem}>
@@ -84,7 +84,7 @@ const Navbar = () => (
                 rel='noopener noreferrer'
                 target='_blank'
               >
-                <i class='fa-brands fa-linkedin'></i>
+                <i className='fa-brands fa-linkedin'></i>
               </a>
             </li>
           </div>
