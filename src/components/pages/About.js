@@ -6,6 +6,8 @@ import sanityClient from '../../client.js';
 import imageUrlBuilder from '@sanity/image-url';
 import BlockContent from '@sanity/block-content-to-react';
 // import hk from '../../img/hk.jpg';
+
+import SamplesOfWork from './SamplesOfWork.js';
 import classes from '../../styles/About.module.css';
 
 const builder = imageUrlBuilder(sanityClient);
@@ -62,6 +64,8 @@ const About = () => {
                   />
                 </div>
               ))}
+            <br />
+            <SamplesOfWork />
           </Col>
 
           {/* <Col md={1}></Col> */}

@@ -1,18 +1,18 @@
 import {defineField, defineType} from 'sanity'
 
 export default defineType({
-  name: 'about',
-  title: 'About Page',
+  name: 'samplesOfWork',
+  title: 'About Page: Samples of Work',
   type: 'document',
   fields: [
+    defineField({
+      name: 'category',
+      title: 'Category',
+      type: 'string',
+    }),
     // defineField({
-    //   name: 'title',
-    //   title: 'Title',
-    //   type: 'string',
-    // }),
-    // defineField({
-    //   name: 'bio',
-    //   title: 'Bio',
+    //   name: 'work',
+    //   title: 'Work Samples',
     //   type: 'string',
     // }),
     // defineField({
@@ -31,30 +31,10 @@ export default defineType({
     //   to: {type: 'author'},
     // }),
     defineField({
-      name: 'bio',
-      title: 'Bio',
+      name: 'workSamples',
+      title: 'Samples of Work',
       type: 'blockContent',
     }),
-    defineField({
-      name: 'mainImage',
-      title: 'About Page Image',
-      type: 'image',
-      options: {
-        hotspot: true,
-      },
-    }),
-
-    // defineField({
-    //   name: 'categories',
-    //   title: 'Categories',
-    //   type: 'array',
-    //   of: [{type: 'reference', to: {type: 'category'}}],
-    // }),
-    // defineField({
-    //   name: 'publishedAt',
-    //   title: 'Published at',
-    //   type: 'datetime',
-    // }),
   ],
 
   preview: {

@@ -7,7 +7,7 @@ export default defineType({
   fields: [
     defineField({
       name: 'image_01',
-      title: 'Gallery Image 1 (Landscape)',
+      title: 'Image 1 (Landscape)',
       type: 'image',
       options: {
         hotspot: true,
@@ -23,12 +23,13 @@ export default defineType({
     // }),
     defineField({
       name: 'title_01',
-      title: 'Alternate Text 1 (if the image cannot be viewed, this is the text that will show)',
+      title:
+        'Alternate Text 1 (if the image cannot be viewed, this is the text that will be shown)',
       type: 'string',
     }),
     defineField({
       name: 'image_02',
-      title: 'Gallery Image 2 (Portrait)',
+      title: 'Image 2 (Portrait)',
       type: 'image',
       options: {
         hotspot: true,
@@ -44,12 +45,13 @@ export default defineType({
     // }),
     defineField({
       name: 'title_02',
-      title: 'Alternate Text 2 (if the image cannot be viewed, this is the text that will show)',
+      title:
+        'Alternate Text 2 (if the image cannot be viewed, this is the text that will be shown)',
       type: 'string',
     }),
     defineField({
       name: 'image_03',
-      title: 'Gallery Image 3 (Portrait)',
+      title: 'Image 3 (Portrait)',
       type: 'image',
       options: {
         hotspot: true,
@@ -65,12 +67,13 @@ export default defineType({
     // }),
     defineField({
       name: 'title_03',
-      title: 'Alternate Text 3 (if the image cannot be viewed, this is the text that will show)',
+      title:
+        'Alternate Text 3 (if the image cannot be viewed, this is the text that will be shown)',
       type: 'string',
     }),
     defineField({
       name: 'image_04',
-      title: 'Gallery Image 4 (Landscape)',
+      title: 'Image 4 (Landscape)',
       type: 'image',
       options: {
         hotspot: true,
@@ -86,12 +89,13 @@ export default defineType({
     // }),
     defineField({
       name: 'title_04',
-      title: 'Alternate Text 4 (if the image cannot be viewed, this is the text that will show)',
+      title:
+        'Alternate Text 4 (if the image cannot be viewed, this is the text that will be shown)',
       type: 'string',
     }),
     defineField({
       name: 'image_05',
-      title: 'Gallery Image 5 (Landscape)',
+      title: 'Image 5 (Landscape)',
       type: 'image',
       options: {
         hotspot: true,
@@ -107,12 +111,13 @@ export default defineType({
     // }),
     defineField({
       name: 'title_05',
-      title: 'Alternate Text 5 (if the image cannot be viewed, this is the text that will show)',
+      title:
+        'Alternate Text 5 (if the image cannot be viewed, this is the text that will be shown)',
       type: 'string',
     }),
     defineField({
       name: 'image_06',
-      title: 'Gallery Image 6 (Portrait)',
+      title: 'Image 6 (Portrait)',
       type: 'image',
       options: {
         hotspot: true,
@@ -128,7 +133,8 @@ export default defineType({
     // }),
     defineField({
       name: 'title_06',
-      title: 'Alternate Text 6 (if the image cannot be viewed, this is the text that will show)',
+      title:
+        'Alternate Text 6 (if the image cannot be viewed, this is the text that will be shown)',
       type: 'string',
     }),
   ],

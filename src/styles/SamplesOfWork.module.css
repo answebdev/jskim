@@ -1,0 +1,73 @@
+/* .Container {
+  padding: 6em;
+  color: var(--primaryDark);
+} */
+
+/* .LeadTitle {
+  margin-top: 1em;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-family: var(--primaryFontFamily);
+} */
+
+.MainDiv {
+  line-height: 1;
+}
+
+.CategoryHeader {
+  font-size: 16px;
+  letter-spacing: 1.5px;
+  font-weight: 700;
+  /* color: #6c757d; */
+  font-family: var(--primaryFontFamily);
+}
+
+/* ===== MEDIA QUERIES ===== */
+
+@media screen and (min-width: 981px) and (max-width: 1200px) {
+  /* body {
+        background-color: red;
+      } */
+}
+
+@media screen and (min-width: 769px) and (max-width: 980px) {
+  /* body {
+      background-color: yellow;
+    } */
+}
+
+@media screen and (min-width: 641px) and (max-width: 768px) {
+  /* body {
+      background-color: steelblue;
+    } */
+}
+
+@media screen and (min-width: 551px) and (max-width: 640px) {
+  /* body {
+      background-color: brown;
+    } */
+}
+
+@media screen and (min-width: 471px) and (max-width: 550px) {
+  /* body {
+      background-color: salmon;
+    } */
+}
+
+@media screen and (min-width: 431px) and (max-width: 470px) {
+  /* body {
+      background-color: black;
+    } */
+}
+
+@media screen and (min-width: 401px) and (max-width: 430px) {
+  /* body {
+      background-color: burlywood;
+    } */
+}
+
+@media screen and (min-width: 100px) and (max-width: 400px) {
+  /* body {
+      background-color: pink;
+    } */
+}
