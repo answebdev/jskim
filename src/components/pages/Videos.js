@@ -45,15 +45,15 @@ const Videos = () => {
           </Col>
         </Row>
 
-        {/* <Row>
+        <Row>
           <Col md={12}>
             <p className={classes.MainText}>
-              Bacon ipsum dolor amet beef ham hock corned beef, shank strip
-              steak hamburger jowl alcatra picanha biltong doner ribeye
-              capicola.
+              A selection of some of my videos.
             </p>
+            {/* <br />
+            <br /> */}
           </Col>
-        </Row> */}
+        </Row>
 
         <Row>
           <Col md={2}></Col>
@@ -63,16 +63,27 @@ const Videos = () => {
                 return (
                   <div
                     key={index}
-                    style={{ position: 'relative', paddingTop: '56.25%' }}
+                    style={{
+                      position: 'relative',
+                      paddingTop: '56.25%',
+                      // marginBottom: '24px',
+                      marginBottom:
+                        videoData.length - 1 === index ? '0' : '24px', // Do not add bottom margin to last video
+                    }}
                   >
                     <ReactPlayer
                       controls={true}
-                      style={{ position: 'absolute', top: '0', left: '0' }}
+                      style={{
+                        position: 'absolute',
+                        top: '0',
+                        left: '0',
+                      }}
                       width='100%'
                       height='100%'
                       url={item.videoUrl}
+                      // title={item.title}
                     />
-                    <br />
+
                     {/* <div style={{ padding: '75% 0 0 0', position: 'relative' }}>
                       <iframe
                         src={item.videoUrl}

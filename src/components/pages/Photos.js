@@ -18,7 +18,7 @@ const Photos = () => {
   useEffect(() => {
     sanityClient
       .fetch(
-        `*[_type == "photos"]{
+        `*[_type == "photos"] | order(_createdAt asc){
         title_01,
         title_02,
         title_03,
@@ -64,16 +64,15 @@ const Photos = () => {
           </Col>
         </Row>
 
-        {/* <Row>
+        <Row>
           <Col md={12}>
             <p className={classes.MainText}>
-              Bacon ipsum dolor amet beef ham hock corned beef, shank strip
-              steak hamburger jowl alcatra picanha biltong doner ribeye
-              capicola.
+              A selection of some of my modeling work.
             </p>
             <br />
+            <br />
           </Col>
-        </Row> */}
+        </Row>
 
         <Row>
           <Col md={12}>
