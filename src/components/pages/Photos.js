@@ -5,113 +5,12 @@ import sanityClient from '../../client.js';
 import imageUrlBuilder from '@sanity/image-url';
 import classes from '../../styles/Photos.module.css';
 
-// import jisun from '../../img/jisun.jpg';
-// import jisun2 from '../../img/jisun2.jpg';
-// import lamarina from '../../img/lamarina.jpg';
-// import rome from '../../img/jisun-rome.jpg';
-// import capetown from '../../img/capetown.jpg';
-// import admiraltycentre from '../../img/admiralty-centre.jpg';
-// import hat from '../../img/hat.jpg';
-// import nuremberg from '../../img/nuremberg.jpg';
-
-// import thumbnail from '../../img/thumbnail.png';
-// import thumbnail2 from '../../img/thumbnail2.png';
-// import lamarinaThumb from '../../img/lamarina-thumb.png';
-// import romethumb from '../../img/romethumb.png';
-// import capetownthumb from '../../img/capetownthumb.png';
-// import admiraltythumb from '../../img/admiraltythumb.png';
-// import hatthumb from '../../img/hatthumb.png';
-// import nurembergthumb from '../../img/nurembergthumb.png';
-
-// import h1 from '../../img/h1.png';
-// import h2 from '../../img/h2.png';
-// import h7 from '../../img/h7.png';
-// import h3 from '../../img/h3.png';
-// import h4 from '../../img/h4.png';
-// import h5 from '../../img/h5.png';
-// import h6 from '../../img/h6.png';
-// import h8 from '../../img/h8.png';
-
-// import love from '../../img/love.jpg';
-
-// import Gallery from 'react-grid-gallery';
-
 const builder = imageUrlBuilder(sanityClient);
 function urlFor(source) {
   return builder.image(source);
 }
 
-// Gallery components:
-// https://www.npmjs.com/package/react-photo-gallery
-// https://github.com/neptunian/react-photo-gallery
-// https://benhowell.github.io/react-grid-gallery/
-// https://github.com/benhowell/react-grid-gallery
-// Formerly Fancybox: https://fancyapps.com/docs/ui/fancybox/
-
-// THIS ONE IS USED HERE: https://benhowell.github.io/react-grid-gallery/
-
 // For fade in effect on scroll (option 3), watch here, but use opacity effect instead of bounce in: https://www.youtube.com/watch?v=hkhskSrT5SY
-
-// const IMAGES = [
-//   {
-//     src: jisun,
-//     thumbnail: thumbnail,
-//     thumbnailWidth: 320,
-//     thumbnailHeight: 174,
-//     caption: 'Soho, Central Hong Kong',
-//   },
-//   {
-//     src: jisun2,
-//     thumbnail: thumbnail2,
-//     thumbnailWidth: 320,
-//     thumbnailHeight: 212,
-//     caption: 'Hong Kong',
-//   },
-
-//   {
-//     src: lamarina,
-//     thumbnail: lamarinaThumb,
-//     thumbnailWidth: 320,
-//     thumbnailHeight: 212,
-//     caption: 'Central, Hong Kong',
-//   },
-//   {
-//     src: rome,
-//     thumbnail: romethumb,
-//     thumbnailWidth: 320,
-//     thumbnailHeight: 174,
-//     caption: 'Rome, Italy',
-//   },
-//   {
-//     src: capetown,
-//     thumbnail: capetownthumb,
-//     thumbnailWidth: 320,
-//     thumbnailHeight: 212,
-//     caption: 'Cape Town, South Africa',
-//   },
-
-//   {
-//     src: admiraltycentre,
-//     thumbnail: admiraltythumb,
-//     thumbnailWidth: 320,
-//     thumbnailHeight: 212,
-//     caption: 'Admiralty Centre, Hong Kong',
-//   },
-//   {
-//     src: hat,
-//     thumbnail: hatthumb,
-//     thumbnailWidth: 320,
-//     thumbnailHeight: 174,
-//     caption: 'Hokkaido, Japan',
-//   },
-//   {
-//     src: nuremberg,
-//     thumbnail: nurembergthumb,
-//     thumbnailWidth: 320,
-//     thumbnailHeight: 212,
-//     caption: 'Traveling to Nuremberg.',
-//   },
-// ];
 
 const Photos = () => {
   const [imageData, setImageDate] = useState(null);
@@ -161,25 +60,21 @@ const Photos = () => {
             <h2 className={classes.LeadTitle}>
               <strong>Photos</strong>
             </h2>
+            <br />
           </Col>
         </Row>
-        <Row>
+
+        {/* <Row>
           <Col md={12}>
             <p className={classes.MainText}>
               Bacon ipsum dolor amet beef ham hock corned beef, shank strip
               steak hamburger jowl alcatra picanha biltong doner ribeye
               capicola.
             </p>
+            <br />
           </Col>
-        </Row>
+        </Row> */}
 
-        <Row>
-          <Col md={12}>
-            <h3 className={classes.LeadTitle}>
-              <strong>Lightbox 2</strong>
-            </h3>
-          </Col>
-        </Row>
         <Row>
           <Col md={12}>
             {imageData &&
@@ -251,111 +146,6 @@ const Photos = () => {
                         <a
                           href={urlFor(item.image_06).url()}
                           data-lightbox='image-1'
-                        >
-                          <img
-                            src={urlFor(item.image_06).url()}
-                            className='w-100 shadow-1-strong rounded mb-4'
-                            alt={item.title_06}
-                          />
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                );
-              })}
-          </Col>
-        </Row>
-
-        {/* Option 3 Source: https://mdbootstrap.com/docs/standard/extended/gallery/ */}
-
-        {/* Remove captions - maybe not needed. */}
-
-        {/* For lightbox effect: https://fancyapps.com/ 
-        CDN in index.html file
-        Can also install as npm - see docs */}
-        <Row>
-          <Col md={12}>
-            <h3 className={classes.LeadTitle}>
-              <strong>Fancybox</strong>
-            </h3>
-          </Col>
-        </Row>
-        <Row>
-          <Col md={12}>
-            {imageData &&
-              imageData.map((item, index) => {
-                return (
-                  <div key={index}>
-                    <div className='row'>
-                      <div className='col-lg-4 col-md-12 mb-4 mb-lg-0'>
-                        <a
-                          href={urlFor(item.image_01).url()}
-                          data-fancybox='gallery'
-                          // data-caption='Optional caption'
-                        >
-                          <img
-                            src={urlFor(item.image_01).url()}
-                            className='w-100 shadow-1-strong rounded mb-4'
-                            alt={item.title_01}
-                          />
-                        </a>
-
-                        <a
-                          href={urlFor(item.image_02).url()}
-                          data-fancybox='gallery'
-                          // data-caption='Optional caption'
-                        >
-                          <img
-                            src={urlFor(item.image_02).url()}
-                            className='w-100 shadow-1-strong rounded mb-4'
-                            alt={item.title_02}
-                          />
-                        </a>
-                      </div>
-
-                      <div className='col-lg-4 mb-4 mb-lg-0'>
-                        <a
-                          href={urlFor(item.image_03).url()}
-                          data-fancybox='gallery'
-                          // data-caption='Optional caption'
-                        >
-                          <img
-                            src={urlFor(item.image_03).url()}
-                            className='w-100 shadow-1-strong rounded mb-4'
-                            alt={item.title_03}
-                          />
-                        </a>
-
-                        <a
-                          href={urlFor(item.image_04).url()}
-                          data-fancybox='gallery'
-                          // data-caption='Cape Town, South Africa'
-                        >
-                          <img
-                            src={urlFor(item.image_04).url()}
-                            className='w-100 shadow-1-strong rounded mb-4'
-                            alt={item.title_04}
-                          />
-                        </a>
-                      </div>
-
-                      <div className='col-lg-4 mb-4 mb-lg-0'>
-                        <a
-                          href={urlFor(item.image_05).url()}
-                          data-fancybox='gallery'
-                          // data-caption='Optional caption'
-                        >
-                          <img
-                            src={urlFor(item.image_05).url()}
-                            className='w-100 shadow-1-strong rounded mb-4'
-                            alt={item.title_05}
-                          />
-                        </a>
-
-                        <a
-                          href={urlFor(item.image_06).url()}
-                          data-fancybox='gallery'
-                          // data-caption='Optional caption'
                         >
                           <img
                             src={urlFor(item.image_06).url()}

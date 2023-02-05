@@ -57,6 +57,7 @@
 }
 
 .NavLink {
+  cursor: pointer;
   color: var(--primaryDark);
   text-decoration: none;
   text-transform: uppercase;
