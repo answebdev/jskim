@@ -48,7 +48,7 @@ const Videos = () => {
         <Row>
           <Col md={12}>
             <p className={classes.MainText}>
-              A selection of some of my videos.
+              A selection of some of my video shoots.
             </p>
             {/* <br />
             <br /> */}
