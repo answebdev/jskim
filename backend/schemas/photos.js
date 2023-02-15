@@ -13,18 +13,9 @@ export default defineType({
         hotspot: true,
       },
     }),
-    // defineField({
-    //   name: 'thumbnail_01',
-    //   title: 'Thumbnail 1 (Landscape)',
-    //   type: 'image',
-    //   options: {
-    //     hotspot: true,
-    //   },
-    // }),
     defineField({
       name: 'title_01',
-      title:
-        'Alternate Text 1 (if the image cannot be viewed, this is the text that will be shown)',
+      title: 'Alternate Text 1',
       type: 'string',
     }),
     defineField({
@@ -35,18 +26,9 @@ export default defineType({
         hotspot: true,
       },
     }),
-    // defineField({
-    //   name: 'thumbnail_02',
-    //   title: 'Thumbnail 2 (Portrait)',
-    //   type: 'image',
-    //   options: {
-    //     hotspot: true,
-    //   },
-    // }),
     defineField({
       name: 'title_02',
-      title:
-        'Alternate Text 2 (if the image cannot be viewed, this is the text that will be shown)',
+      title: 'Alternate Text 2',
       type: 'string',
     }),
     defineField({
@@ -57,18 +39,9 @@ export default defineType({
         hotspot: true,
       },
     }),
-    // defineField({
-    //   name: 'thumbnail_03',
-    //   title: 'Thumbnail 3 (Portrait)',
-    //   type: 'image',
-    //   options: {
-    //     hotspot: true,
-    //   },
-    // }),
     defineField({
       name: 'title_03',
-      title:
-        'Alternate Text 3 (if the image cannot be viewed, this is the text that will be shown)',
+      title: 'Alternate Text 3',
       type: 'string',
     }),
     defineField({
@@ -79,18 +52,9 @@ export default defineType({
         hotspot: true,
       },
     }),
-    // defineField({
-    //   name: 'thumbnail_04',
-    //   title: 'Thumbnail 4 (Landscape)',
-    //   type: 'image',
-    //   options: {
-    //     hotspot: true,
-    //   },
-    // }),
     defineField({
       name: 'title_04',
-      title:
-        'Alternate Text 4 (if the image cannot be viewed, this is the text that will be shown)',
+      title: 'Alternate Text 4',
       type: 'string',
     }),
     defineField({
@@ -101,18 +65,9 @@ export default defineType({
         hotspot: true,
       },
     }),
-    // defineField({
-    //   name: 'thumbnail_05',
-    //   title: 'Thumbnail 5 (Landscape)',
-    //   type: 'image',
-    //   options: {
-    //     hotspot: true,
-    //   },
-    // }),
     defineField({
       name: 'title_05',
-      title:
-        'Alternate Text 5 (if the image cannot be viewed, this is the text that will be shown)',
+      title: 'Alternate Text 5',
       type: 'string',
     }),
     defineField({
@@ -123,18 +78,9 @@ export default defineType({
         hotspot: true,
       },
     }),
-    // defineField({
-    //   name: 'thumbnail_06',
-    //   title: 'Thumbnail 6 (Portrait)',
-    //   type: 'image',
-    //   options: {
-    //     hotspot: true,
-    //   },
-    // }),
     defineField({
       name: 'title_06',
-      title:
-        'Alternate Text 6 (if the image cannot be viewed, this is the text that will be shown)',
+      title: 'Alternate Text 6',
       type: 'string',
     }),
   ],
