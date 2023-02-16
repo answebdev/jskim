@@ -12,7 +12,7 @@ export default defineType({
     }),
     defineField({
       name: 'title',
-      title: 'Video Title',
+      title: 'Title',
       type: 'string',
     }),
   ],

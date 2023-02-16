@@ -15,7 +15,7 @@ export default defineType({
     }),
     defineField({
       name: 'title_01',
-      title: 'Alternate Text 1',
+      title: 'Title 1',
       type: 'string',
     }),
     defineField({
@@ -28,7 +28,7 @@ export default defineType({
     }),
     defineField({
       name: 'title_02',
-      title: 'Alternate Text 2',
+      title: 'Title 2',
       type: 'string',
     }),
     defineField({
@@ -41,7 +41,7 @@ export default defineType({
     }),
     defineField({
       name: 'title_03',
-      title: 'Alternate Text 3',
+      title: 'Title 3',
       type: 'string',
     }),
     defineField({
@@ -54,7 +54,7 @@ export default defineType({
     }),
     defineField({
       name: 'title_04',
-      title: 'Alternate Text 4',
+      title: 'Title 4',
       type: 'string',
     }),
     defineField({
@@ -67,7 +67,7 @@ export default defineType({
     }),
     defineField({
       name: 'title_05',
-      title: 'Alternate Text 5',
+      title: 'Title 5',
       type: 'string',
     }),
     defineField({
@@ -80,7 +80,7 @@ export default defineType({
     }),
     defineField({
       name: 'title_06',
-      title: 'Alternate Text 6',
+      title: 'Title 6',
       type: 'string',
     }),
   ],
