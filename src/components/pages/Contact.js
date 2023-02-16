@@ -71,10 +71,15 @@ const Contact = () => {
 
           <Col lg={7} md={12}>
             <div className={classes.LeadText}>
+              {/* <p>
+                Jisun Kim is available for shoots. To contact about bookings,
+                use the contact form below.
+              </p> */}
               <p>
                 Jisun Kim is available for shoots. To contact about bookings,
                 use the form or contact by email at&nbsp;
-                <a href='mailto:adolf.schmuck@gmail.com'>example@gmail.com</a>.
+                <a href='mailto:mallakkangi@gmail.com'>mallakkangi@gmail.com</a>
+                .
               </p>
               <Form
                 action='/success'
