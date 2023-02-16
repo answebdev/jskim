@@ -24,3 +24,7 @@
 
 # Typescript
 *.tsbuildinfo
+
+# dotenv environment variables files
+.env.development
+.env.production
