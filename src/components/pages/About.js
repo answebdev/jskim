@@ -2,12 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import { Row, Col, Image } from 'react-bootstrap';
-// import { Link } from 'react-router-dom';
 import sanityClient from '../../client.js';
 import imageUrlBuilder from '@sanity/image-url';
 import BlockContent from '@sanity/block-content-to-react';
-// import hk from '../../img/hk.jpg';
-
 import SamplesOfWork from './SamplesOfWork.js';
 import classes from '../../styles/About.module.css';
 
@@ -52,7 +49,6 @@ const About = () => {
         </Row>
 
         <Row>
-          {/* <Col  md={5}> */}
           <Col lg={5} md={12}>
             <p className={classes.SubTitle}>Seoul, Korea</p>
             {allData &&
@@ -69,13 +65,9 @@ const About = () => {
             <SamplesOfWork />
           </Col>
 
-          {/* <Col md={1}></Col> */}
           <Col lg={1} md={12}></Col>
 
-          {/* <Col md={6}> */}
           <Col lg={6} md={12}>
-            {/* <Image className={classes.MainImage} src={hk} fluid /> */}
-
             <TransitionGroup>
               {allData &&
                 allData.map((item, index) => (

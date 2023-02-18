@@ -1,27 +1,10 @@
 import React from 'react';
-// import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import { motion } from 'framer-motion';
-// import sanityClient from '../../client.js';
 import classes from '../../styles/Home.module.css';
 
-// Adapted from: https://codepen.io/akash-1618/pen/rNwxOWX
-
 const Home = () => {
-  // const [landingData, setLandingData] = useState(null);
-
-  // useEffect(() => {
-  //   sanityClient
-  //     .fetch(
-  //       `*[_type == "landing"]{
-  //       subheader,
-  //   }`
-  //     )
-  //     .then((data) => setLandingData(data))
-  //     .catch(console.error);
-  // }, []);
-
   return (
     <div>
       <Helmet>
@@ -58,14 +41,6 @@ const Home = () => {
           <div className={`${classes.Container} ${classes.LandingFlex}`}>
             <h1 className={classes.Title}>Jisun Kim</h1>
             <div className={classes.Description}>Model | Traveler</div>
-            {/* {landingData &&
-              landingData.map((item, index) => {
-                return (
-                  <div key={index} className={classes.Description}>
-                    {item.subheader}
-                  </div>
-                );
-              })} */}
             <div className={classes.ButtonContainer}>
               <Link className={classes.Button} to='/about'>
                 Explore

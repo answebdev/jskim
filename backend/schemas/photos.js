@@ -91,9 +91,5 @@ export default defineType({
       author: 'author.name',
       media: 'contactImage',
     },
-    // prepare(selection) {
-    //   const {author} = selection
-    //   return {...selection, subtitle: author && `by ${author}`}
-    // },
   },
 })

@@ -63,21 +63,10 @@ const Contact = () => {
                   </CSSTransition>
                 ))}
             </TransitionGroup>
-
-            {/* <Image
-              className={classes.MainImage}
-              src={h6}
-              alt='Jisun Kim'
-              fluid
-            /> */}
           </Col>
 
           <Col lg={7} md={12}>
             <div className={classes.LeadText}>
-              {/* <p>
-                Jisun Kim is available for shoots. To contact about bookings,
-                use the contact form below.
-              </p> */}
               <p>
                 Jisun Kim is available for shoots. To contact about bookings,
                 use the form or contact by email at&nbsp;
@@ -116,9 +105,6 @@ const Contact = () => {
                     placeholder='email@example.com'
                     required
                   />
-                  {/* <Form.Text className='text-muted'>
-                    Your email will never be shared with anyone else.
-                  </Form.Text> */}
                 </Form.Group>
                 <Form.Group controlId='exampleForm.ControlTextarea1'>
                   <Form.Label className={classes.Label}>Message</Form.Label>

@@ -21,8 +21,6 @@
 .Description {
   font-size: 1.2rem;
   letter-spacing: 1.5px;
-
-  /* text-transform: uppercase; */
   font-family: var(--primaryFontFamily);
 }
 
@@ -39,12 +37,10 @@
   width: 150px;
   height: 35px;
   border-style: solid;
-  /* border-radius: 0; */
   border-radius: 0.25rem;
   font-size: 15px;
   text-transform: uppercase;
   margin-top: 20px;
-
   border: 1px solid var(--primaryDark);
 }
 

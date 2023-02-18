@@ -1,26 +1,6 @@
 import { Link } from 'react-router-dom';
 import classes from '../../styles/Navbar.module.css';
 
-// Hide nav bar on scroll down and show it on scroll up -
-// https://stackoverflow.com/questions/51340863/hide-nav-bar-on-scroll-down-and-show-it-on-scroll-up
-// Also: https://www.devtwins.com/blog/sticky-navbar-hides-scroll
-
-// window.onscroll = function (e) {
-//   var scrollY = window.pageYOffset || document.documentElement.scrollTop;
-//   var header = document.querySelector('header');
-//   var height = -header.clientHeight;
-//   header.style.transition = 'transform 0.1s';
-
-//   scrollY <= Math.max(this.lastScroll, 50) ||
-//   window.innerWidth <= 1200 ||
-//   this.loaded === undefined
-//     ? (header.style.transform = 'translateY(0px)')
-//     : (header.style.transform = 'translateY(' + height + 'px)');
-
-//   this.lastScroll = scrollY;
-//   this.loaded = true;
-// };
-
 const Navbar = () => (
   <div className='navbar'>
     <header className={classes.Navbar}>

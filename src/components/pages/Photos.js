@@ -13,8 +13,6 @@ function urlFor(source) {
   return builder.image(source);
 }
 
-// For fade in effect on scroll (option 3), watch here, but use opacity effect instead of bounce in: https://www.youtube.com/watch?v=hkhskSrT5SY
-
 const Photos = () => {
   const [imageData, setImageDate] = useState(null);
 
@@ -98,11 +96,9 @@ const Photos = () => {
                 {imageData &&
                   imageData.map((item, index) => (
                     <CSSTransition classNames='item' key={index} timeout={500}>
-                      {/* return ( */}
                       <div>
                         <div className='row'>
                           <div className='col-lg-4 col-md-12 mb-4 mb-lg-0'>
-                            {/* <a href={item.thumbnail_01} data-lightbox='image-1'> */}
                             <a
                               href={urlFor(item.image_01).url()}
                               data-lightbox='image-1'
@@ -175,7 +171,6 @@ const Photos = () => {
                           </div>
                         </div>
                       </div>
-                      {/* ); */}
                     </CSSTransition>
                   ))}
               </TransitionGroup>

@@ -10,26 +10,6 @@ export default defineType({
       title: 'Category',
       type: 'string',
     }),
-    // defineField({
-    //   name: 'work',
-    //   title: 'Work Samples',
-    //   type: 'string',
-    // }),
-    // defineField({
-    //   name: 'slug',
-    //   title: 'Slug',
-    //   type: 'slug',
-    //   options: {
-    //     source: 'title',
-    //     maxLength: 96,
-    //   },
-    // }),
-    // defineField({
-    //   name: 'author',
-    //   title: 'Author',
-    //   type: 'reference',
-    //   to: {type: 'author'},
-    // }),
     defineField({
       name: 'workSamples',
       title: 'Samples of Work',
@@ -43,9 +23,5 @@ export default defineType({
       author: 'author.name',
       media: 'mainImage',
     },
-    // prepare(selection) {
-    //   const {author} = selection
-    //   return {...selection, subtitle: author && `by ${author}`}
-    // },
   },
 })

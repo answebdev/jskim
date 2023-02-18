@@ -19,18 +19,15 @@
 }
 
 .LeadText {
-  /* margin-top: 40px; */
   line-height: 1.6;
 }
 
 .FormInput {
   border-color: #ced4da;
-  /* border-color: var(--primaryDark); */
 }
 
 .FormInput:focus {
   border-color: #ced4da;
-  /* border-color: var(--primaryDark); */
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset;
 }
 
@@ -51,14 +48,11 @@
   width: 150px;
   height: 35px;
   border-style: solid;
-  /* border-radius: 0; */
   border-radius: 0.25rem;
   font-size: 15px;
   text-transform: uppercase;
   margin-top: 20px;
-
   border: 1px solid #ced4da;
-  /* border: 1px solid var(--primaryDark); */
 }
 
 .Button:hover,

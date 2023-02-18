@@ -4,7 +4,6 @@
 }
 
 .AppLogo {
-  /* height: 40vmin; */
   height: 35vmin;
   pointer-events: none;
 }
@@ -102,6 +101,7 @@
   /* body {
     background-color: burlywood;
   } */
+
   .PageNotFound {
     font-size: 18px;
   }
