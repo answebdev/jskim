@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet';
+import { CSSTransition, TransitionGroup } from 'react-transition-group';
+import { motion } from 'framer-motion';
 import { Row, Col } from 'react-bootstrap';
 import sanityClient from '../../client.js';
 import imageUrlBuilder from '@sanity/image-url';
 import classes from '../../styles/Photos.module.css';
+import '../../App.css';
 
 const builder = imageUrlBuilder(sanityClient);
 function urlFor(source) {
@@ -76,87 +79,107 @@ const Photos = () => {
 
         <Row>
           <Col md={12}>
-            {imageData &&
-              imageData.map((item, index) => {
-                return (
-                  <div key={index}>
-                    <div className='row'>
-                      <div className='col-lg-4 col-md-12 mb-4 mb-lg-0'>
-                        {/* <a href={item.thumbnail_01} data-lightbox='image-1'> */}
-                        <a
-                          href={urlFor(item.image_01).url()}
-                          data-lightbox='image-1'
-                        >
-                          <img
-                            src={urlFor(item.image_01).url()}
-                            className='w-100 shadow-1-strong rounded mb-4'
-                            alt={item.title_01}
-                          />
-                        </a>
+            <motion.div
+              initial={{
+                opacity: 0,
+                x: 0,
+                y: 50,
+              }}
+              animate={{
+                opacity: 1,
+                x: 0,
+                y: 0,
+              }}
+              transition={{
+                duration: 1,
+              }}
+            >
+              <TransitionGroup>
+                {imageData &&
+                  imageData.map((item, index) => (
+                    <CSSTransition classNames='item' key={index} timeout={500}>
+                      {/* return ( */}
+                      <div>
+                        <div className='row'>
+                          <div className='col-lg-4 col-md-12 mb-4 mb-lg-0'>
+                            {/* <a href={item.thumbnail_01} data-lightbox='image-1'> */}
+                            <a
+                              href={urlFor(item.image_01).url()}
+                              data-lightbox='image-1'
+                            >
+                              <img
+                                src={urlFor(item.image_01).url()}
+                                className='w-100 shadow-1-strong rounded mb-4'
+                                alt={item.title_01}
+                              />
+                            </a>
 
-                        <a
-                          href={urlFor(item.image_02).url()}
-                          data-lightbox='image-1'
-                        >
-                          <img
-                            src={urlFor(item.image_02).url()}
-                            className='w-100 shadow-1-strong rounded mb-4'
-                            alt={item.title_02}
-                          />
-                        </a>
+                            <a
+                              href={urlFor(item.image_02).url()}
+                              data-lightbox='image-1'
+                            >
+                              <img
+                                src={urlFor(item.image_02).url()}
+                                className='w-100 shadow-1-strong rounded mb-4'
+                                alt={item.title_02}
+                              />
+                            </a>
+                          </div>
+
+                          <div className='col-lg-4 mb-4 mb-lg-0'>
+                            <a
+                              href={urlFor(item.image_03).url()}
+                              data-lightbox='image-1'
+                            >
+                              <img
+                                src={urlFor(item.image_03).url()}
+                                className='w-100 shadow-1-strong rounded mb-4'
+                                alt={item.title_03}
+                              />
+                            </a>
+
+                            <a
+                              href={urlFor(item.image_04).url()}
+                              data-lightbox='image-1'
+                            >
+                              <img
+                                src={urlFor(item.image_04).url()}
+                                className='w-100 shadow-1-strong rounded mb-4'
+                                alt={item.title_04}
+                              />
+                            </a>
+                          </div>
+
+                          <div className='col-lg-4 mb-4 mb-lg-0'>
+                            <a
+                              href={urlFor(item.image_05).url()}
+                              data-lightbox='image-1'
+                            >
+                              <img
+                                src={urlFor(item.image_05).url()}
+                                className='w-100 shadow-1-strong rounded mb-4'
+                                alt={item.title_05}
+                              />
+                            </a>
+
+                            <a
+                              href={urlFor(item.image_06).url()}
+                              data-lightbox='image-1'
+                            >
+                              <img
+                                src={urlFor(item.image_06).url()}
+                                className='w-100 shadow-1-strong rounded mb-4'
+                                alt={item.title_06}
+                              />
+                            </a>
+                          </div>
+                        </div>
                       </div>
-
-                      <div className='col-lg-4 mb-4 mb-lg-0'>
-                        <a
-                          href={urlFor(item.image_03).url()}
-                          data-lightbox='image-1'
-                        >
-                          <img
-                            src={urlFor(item.image_03).url()}
-                            className='w-100 shadow-1-strong rounded mb-4'
-                            alt={item.title_03}
-                          />
-                        </a>
-
-                        <a
-                          href={urlFor(item.image_04).url()}
-                          data-lightbox='image-1'
-                        >
-                          <img
-                            src={urlFor(item.image_04).url()}
-                            className='w-100 shadow-1-strong rounded mb-4'
-                            alt={item.title_04}
-                          />
-                        </a>
-                      </div>
-
-                      <div className='col-lg-4 mb-4 mb-lg-0'>
-                        <a
-                          href={urlFor(item.image_05).url()}
-                          data-lightbox='image-1'
-                        >
-                          <img
-                            src={urlFor(item.image_05).url()}
-                            className='w-100 shadow-1-strong rounded mb-4'
-                            alt={item.title_05}
-                          />
-                        </a>
-
-                        <a
-                          href={urlFor(item.image_06).url()}
-                          data-lightbox='image-1'
-                        >
-                          <img
-                            src={urlFor(item.image_06).url()}
-                            className='w-100 shadow-1-strong rounded mb-4'
-                            alt={item.title_06}
-                          />
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                );
-              })}
+                      {/* ); */}
+                    </CSSTransition>
+                  ))}
+              </TransitionGroup>
+            </motion.div>
           </Col>
         </Row>
       </div>
