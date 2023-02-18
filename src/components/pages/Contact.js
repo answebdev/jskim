@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet';
+import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import { Row, Col, Image, Form } from 'react-bootstrap';
 import sanityClient from '../../client.js';
 import imageUrlBuilder from '@sanity/image-url';
@@ -47,19 +48,21 @@ const Contact = () => {
 
         <Row>
           <Col lg={5} md={12}>
-            {data &&
-              data.map((item, index) => {
-                return (
-                  <div key={index}>
-                    <Image
-                      className={classes.MainImage}
-                      src={urlFor(item.contactImage).url()}
-                      alt='Jisun Kim'
-                      fluid
-                    />
-                  </div>
-                );
-              })}
+            <TransitionGroup>
+              {data &&
+                data.map((item, index) => (
+                  <CSSTransition classNames='item' key={index} timeout={500}>
+                    <div key={index}>
+                      <Image
+                        className={classes.MainImage}
+                        src={urlFor(item.contactImage).url()}
+                        alt='Jisun Kim'
+                        fluid
+                      />
+                    </div>
+                  </CSSTransition>
+                ))}
+            </TransitionGroup>
 
             {/* <Image
               className={classes.MainImage}

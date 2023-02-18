@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet';
+import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import { Row, Col, Image } from 'react-bootstrap';
 // import { Link } from 'react-router-dom';
 import sanityClient from '../../client.js';
@@ -75,19 +76,21 @@ const About = () => {
           <Col lg={6} md={12}>
             {/* <Image className={classes.MainImage} src={hk} fluid /> */}
 
-            {allData &&
-              allData.map((item, index) => {
-                return (
-                  <div key={index}>
-                    <Image
-                      className={classes.MainImage}
-                      src={urlFor(item.mainImage).url()}
-                      alt='Jisun Kim'
-                      fluid
-                    />
-                  </div>
-                );
-              })}
+            <TransitionGroup>
+              {allData &&
+                allData.map((item, index) => (
+                  <CSSTransition classNames='item' key={index} timeout={500}>
+                    <div key={index}>
+                      <Image
+                        className={classes.MainImage}
+                        src={urlFor(item.mainImage).url()}
+                        alt='Jisun Kim'
+                        fluid
+                      />
+                    </div>
+                  </CSSTransition>
+                ))}
+            </TransitionGroup>
           </Col>
         </Row>
       </div>
