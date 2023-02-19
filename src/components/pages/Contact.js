@@ -35,7 +35,7 @@ const Contact = () => {
     <div>
       <Helmet>
         <title>Jisun Kim | Contact</title>
-        <meta
+        {/* <meta
           name='description'
           content='Jisun Kim is a South Korean model with a wide range of experience and is available for shoots. Get in touch with her for bookings or inquiries today.'
         />
@@ -50,7 +50,7 @@ const Contact = () => {
         <meta
           property='og:description'
           content='Jisun Kim is a South Korean model with a wide range of experience and is available for shoots. Get in touch with her for bookings or inquiries today.'
-        />
+        /> */}
       </Helmet>
       <div className={classes.Container}>
         <Row>

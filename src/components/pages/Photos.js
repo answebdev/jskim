@@ -54,7 +54,7 @@ const Photos = () => {
     <div>
       <Helmet>
         <title>Jisun Kim | Photos</title>
-        <meta
+        {/* <meta
           name='description'
           content='Jisun Kim is a model from South Korea. Get to know her and view a selection of photos from her modeling work in a variety of styles and locations.'
         />
@@ -66,7 +66,7 @@ const Photos = () => {
         <meta
           property='og:description'
           content='Jisun Kim is a model from South Korea. Get to know her and view a selection of photos from her modeling work in a variety of styles and locations.'
-        />
+        /> */}
       </Helmet>
       <div className={classes.Container}>
         <Row>
