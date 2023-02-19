@@ -36,11 +36,18 @@ const Videos = () => {
     <div>
       <Helmet>
         <title>Jisun Kim | Videos</title>
-        <meta name='description' content='Jisun Kim Official Website.' />
-        <meta property='og:title' content='Jisun Kim | Videos' />
+        <meta
+          name='description'
+          content='Jisun Kim is a model from South Korea. Get to know her and view a selection of videos from various shoots, ranging from travel videos to commercials.'
+        />
+        <meta property='og:url' content='https://jisunkim.netlify.app/videos' />
+        <meta
+          property='og:title'
+          content='Jisun Kim Official Website | Videos'
+        />
         <meta
           property='og:description'
-          content='Jisun Kim is a model from South Korea.. A selection of videos from various video shoots.'
+          content='Jisun Kim is a model from South Korea. Get to know her and view a selection of videos from various shoots, ranging from travel videos to commercials.'
         />
       </Helmet>
       <div className={classes.Container}>

@@ -9,11 +9,15 @@ const Home = () => {
     <div>
       <Helmet>
         <title>Jisun Kim</title>
-        <meta name='description' content='Jisun Kim Official Website.' />
-        <meta property='og:title' content='Jisun Kim' />
+        <meta
+          name='description'
+          content='Welcome to the official website of South Korean model Jisun Kim. Here you can find a varied selection of photos and videos from her modeling work.'
+        />
+        <meta property='og:url' content='https://jisunkim.netlify.app/' />
+        <meta property='og:title' content='Jisun Kim Official Website' />
         <meta
           property='og:description'
-          content='Jisun Kim is a model from South Korea.'
+          content='Welcome to the official website of South Korean model Jisun Kim. Here you can find a varied selection of photos and videos from her modeling work.'
         />
         <style type='text/css'>{`        
         .navbar,

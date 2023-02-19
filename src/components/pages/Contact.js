@@ -35,11 +35,21 @@ const Contact = () => {
     <div>
       <Helmet>
         <title>Jisun Kim | Contact</title>
-        <meta name='description' content='Jisun Kim Official Website.' />
-        <meta property='og:title' content='Jisun Kim | Contact' />
+        <meta
+          name='description'
+          content='Jisun Kim is a South Korean model with a wide range of experience and is available for shoots. Get in touch with her for bookings or inquiries today.'
+        />
+        <meta
+          property='og:url'
+          content='https://jisunkim.netlify.app/contact'
+        />
+        <meta
+          property='og:title'
+          content='Jisun Kim Official Website | Contact Page'
+        />
         <meta
           property='og:description'
-          content='Jisun Kim is a model from South Korea and is available for bookings.'
+          content='Jisun Kim is a South Korean model with a wide range of experience and is available for shoots. Get in touch with her for bookings or inquiries today.'
         />
       </Helmet>
       <div className={classes.Container}>

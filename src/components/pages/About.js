@@ -38,11 +38,18 @@ const About = () => {
     <div>
       <Helmet>
         <title>Jisun Kim | About</title>
-        <meta name='description' content='Jisun Kim Official Website.' />
-        <meta property='og:title' content='Jisun Kim | About' />
+        <meta
+          name='description'
+          content='Jisun Kim is a model from South Korea with a variety of photo and video shoots to her name. Explore her portfolio to learn more about her and her work.'
+        />
+        <meta property='og:url' content='https://jisunkim.netlify.app/about' />
+        <meta
+          property='og:title'
+          content='Jisun Kim Official Website | About'
+        />
         <meta
           property='og:description'
-          content='Jisun Kim is a model from South Korea. Bio and a sampling of work.'
+          content='Jisun Kim is a model from South Korea with a variety of photo and video shoots to her name. Explore her portfolio to learn more about her and her work.'
         />
       </Helmet>
       <div className={classes.Container}>
