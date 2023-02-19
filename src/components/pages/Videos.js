@@ -23,7 +23,7 @@ const Videos = () => {
   useEffect(() => {
     sanityClient
       .fetch(
-        `*[_type == "videos"] | order(_createdAt asc){
+        `*[_type == "videos"] | order(_createdAt desc){
           videoUrl,
           title
         }`

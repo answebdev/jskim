@@ -19,7 +19,7 @@ const About = () => {
   useEffect(() => {
     sanityClient
       .fetch(
-        `*[_type == "about"]{
+        `*[_type == "about"] | order(_createdAt asc){
         bio,
         image,
         mainImage{

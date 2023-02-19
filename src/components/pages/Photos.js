@@ -19,7 +19,7 @@ const Photos = () => {
   useEffect(() => {
     sanityClient
       .fetch(
-        `*[_type == "photos"] | order(_createdAt asc){
+        `*[_type == "photos"] | order(_createdAt desc){
         title_01,
         title_02,
         title_03,
