@@ -23,7 +23,7 @@ const Videos = () => {
   useEffect(() => {
     sanityClient
       .fetch(
-        `*[_type == "videos"] | order(_createdAt desc){
+        `*[_type == "videos"] | order(_createdAt desc) {
           videoUrl,
           title
         }`
@@ -36,6 +36,12 @@ const Videos = () => {
     <div>
       <Helmet>
         <title>Jisun Kim | Videos</title>
+        <meta name='description' content='Jisun Kim Official Website.' />
+        <meta property='og:title' content='Jisun Kim | Videos' />
+        <meta
+          property='og:description'
+          content='Jisun Kim is a model from South Korea.. A selection of videos from various video shoots.'
+        />
       </Helmet>
       <div className={classes.Container}>
         <Row>

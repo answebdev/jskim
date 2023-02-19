@@ -19,7 +19,7 @@ const About = () => {
   useEffect(() => {
     sanityClient
       .fetch(
-        `*[_type == "about"] | order(_createdAt asc){
+        `*[_type == "about"] | order(_createdAt asc) {
         bio,
         image,
         mainImage{
@@ -38,6 +38,12 @@ const About = () => {
     <div>
       <Helmet>
         <title>Jisun Kim | About</title>
+        <meta name='description' content='Jisun Kim Official Website.' />
+        <meta property='og:title' content='Jisun Kim | About' />
+        <meta
+          property='og:description'
+          content='Jisun Kim is a model from South Korea. Bio and a sampling of work.'
+        />
       </Helmet>
       <div className={classes.Container}>
         <Row>

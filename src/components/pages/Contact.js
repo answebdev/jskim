@@ -17,7 +17,7 @@ const Contact = () => {
   useEffect(() => {
     sanityClient
       .fetch(
-        `*[_type == "contact"]{
+        `*[_type == "contact"] {
         image,
         contactImage{
           asset->{
@@ -35,6 +35,12 @@ const Contact = () => {
     <div>
       <Helmet>
         <title>Jisun Kim | Contact</title>
+        <meta name='description' content='Jisun Kim Official Website.' />
+        <meta property='og:title' content='Jisun Kim | Contact' />
+        <meta
+          property='og:description'
+          content='Jisun Kim is a model from South Korea and is available for bookings.'
+        />
       </Helmet>
       <div className={classes.Container}>
         <Row>

@@ -9,7 +9,7 @@ const SamplesOfWork = () => {
   useEffect(() => {
     sanityClient
       .fetch(
-        `*[_type == "samplesOfWork"] | order(_createdAt asc){
+        `*[_type == "samplesOfWork"] | order(_createdAt asc) {
             category,
             workSamples,
         }`

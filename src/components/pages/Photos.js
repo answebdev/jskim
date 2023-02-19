@@ -19,7 +19,7 @@ const Photos = () => {
   useEffect(() => {
     sanityClient
       .fetch(
-        `*[_type == "photos"] | order(_createdAt desc){
+        `*[_type == "photos"] | order(_createdAt desc) {
         title_01,
         title_02,
         title_03,
@@ -54,6 +54,12 @@ const Photos = () => {
     <div>
       <Helmet>
         <title>Jisun Kim | Photos</title>
+        <meta name='description' content='Jisun Kim Official Website.' />
+        <meta property='og:title' content='Jisun Kim | Photos' />
+        <meta
+          property='og:description'
+          content='Jisun Kim is a model from South Korea. A selection of photos from modeling work.'
+        />
       </Helmet>
       <div className={classes.Container}>
         <Row>

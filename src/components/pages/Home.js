@@ -9,6 +9,12 @@ const Home = () => {
     <div>
       <Helmet>
         <title>Jisun Kim</title>
+        <meta name='description' content='Jisun Kim Official Website.' />
+        <meta property='og:title' content='Jisun Kim' />
+        <meta
+          property='og:description'
+          content='Jisun Kim is a model from South Korea.'
+        />
         <style type='text/css'>{`        
         .navbar,
         .footer {
