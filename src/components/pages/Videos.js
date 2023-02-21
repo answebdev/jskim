@@ -92,7 +92,7 @@ const Videos = () => {
                             src={item.videoUrl}
                             frameborder='0'
                             allow='autoplay; fullscreen; picture-in-picture'
-                            allowFullScreen
+                            // allowFullScreen
                             style={{
                               position: 'absolute',
                               top: '0',
