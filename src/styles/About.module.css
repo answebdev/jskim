@@ -23,22 +23,27 @@
 }
 
 .MainImage {
-  height: 100%;
-  width: auto;
+  height: auto;
+  width: 100%;
 }
 
 /* ===== MEDIA QUERIES ===== */
 
 @media screen and (min-width: 981px) and (max-width: 1200px) {
   /* body {
-      background-color: red;
-    } */
+    background-color: red;
+  } */
 }
 
 @media screen and (min-width: 769px) and (max-width: 980px) {
   /* body {
     background-color: yellow;
   } */
+
+  .MainImage {
+    height: auto;
+    width: 100%;
+  }
 }
 
 @media screen and (min-width: 641px) and (max-width: 768px) {
@@ -46,12 +51,17 @@
     background-color: steelblue;
   } */
 
+  .Container {
+    padding: 6em;
+  }
+
   .LeadTitle {
     padding-top: 2em;
   }
 
-  .Container {
-    padding: 6em;
+  .MainImage {
+    height: auto;
+    width: 100%;
   }
 }
 
@@ -60,12 +70,17 @@
     background-color: brown;
   } */
 
+  .Container {
+    padding: 6em;
+  }
+
   .LeadTitle {
     padding-top: 2em;
   }
 
-  .Container {
-    padding: 6em;
+  .MainImage {
+    height: auto;
+    width: 100%;
   }
 }
 
@@ -81,6 +96,11 @@
   .LeadTitle {
     padding-top: 3em;
   }
+
+  .MainImage {
+    height: auto;
+    width: 100%;
+  }
 }
 
 @media screen and (min-width: 431px) and (max-width: 470px) {
@@ -94,6 +114,11 @@
 
   .LeadTitle {
     padding-top: 3em;
+  }
+
+  .MainImage {
+    height: auto;
+    width: 100%;
   }
 }
 
@@ -109,6 +134,11 @@
   .LeadTitle {
     padding-top: 3em;
   }
+
+  .MainImage {
+    height: auto;
+    width: 100%;
+  }
 }
 
 @media screen and (min-width: 100px) and (max-width: 400px) {
@@ -122,5 +152,10 @@
 
   .LeadTitle {
     padding-top: 3em;
+  }
+
+  .MainImage {
+    height: auto;
+    width: 100%;
   }
 }

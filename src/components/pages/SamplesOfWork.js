@@ -25,6 +25,7 @@ const SamplesOfWork = () => {
           <div key={index} className={classes.MainDiv}>
             <p className={classes.CategoryHeader}>{item.category}</p>
             <BlockContent
+              className={classes.WorkSample}
               blocks={item.workSamples}
               projectId={sanityClient.clientConfig.projectId}
               dataset={sanityClient.clientConfig.dataset}
