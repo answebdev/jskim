@@ -100,7 +100,7 @@ export default defineType({
 
 ![Screenshot 02](screenshots/jk_screenshot_02.jpg "About Page")
 
-![Screenshot 01](screenshots/jk_screenshot_03.jpg "Image Gallery: Lightbox")
+![Screenshot 01](screenshots/jk_screenshot_03.jpg "Closer look of image with Lightbox")
 
 ![Screenshot 02](screenshots/jk_screenshot_04.jpg "404 Page Not Found")
 
