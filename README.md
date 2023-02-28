@@ -3,11 +3,11 @@
 
 ## Description
 
-iSounds Music is a React application that allows you to search for your favorite artists. After searching for an artist, the user will be able to navigate to the artist's album page, which includes album information, such as album title, year the album was released, an image of the album cover, and more.
+This is the official website I designed and built for a client, a Korean model who wanted a website to showcase her modeling work and have a way for others to reach out to her for bookings or inquiries. By using the Sanity Content Management for the website, the client is able to manage her own content on the website.
 
-## iSounds Music Live Link
+## Jisun Kim Official Website Live Link
 
-Please check out the live link for iSounds Music here: [iSounds Music](https://isoundsmusic.netlify.app/ "iSounds Music")
+Please check out the live link for iSounds Music here: [Jisun Kim Official Website](https://jisunkim.netlify.app/ "Jisun Kim Official Website")
 
 ## Table of Contents
 * [Technologies Used](#Technologies-Used)
