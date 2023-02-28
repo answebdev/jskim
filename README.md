@@ -12,7 +12,6 @@ Please check out the live link for the Official Website here: [Jisun Kim Officia
 ## Table of Contents
 * [Technologies Used](#Technologies-Used)
 * [Development](#Development)
-* [E2E Testing](#E2E-Testing)
 * [Screenshots](#Screenshots)
 
 ## Technologies Used
