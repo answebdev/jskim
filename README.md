@@ -3,7 +3,7 @@
 
 ## Description
 
-This is the official website I designed and built for a client, a Korean model who wanted a website to showcase her modeling work and have a way for others to reach out to her for bookings or inquiries. By using the Sanity Content Management for the website, the client is able to manage her own content on the website.
+Official portfolio website I designed and built for a client, a Korean model who wanted a website to showcase her modeling work and have a way for others to reach out to her for bookings or inquiries. By using the Sanity Content Management for the website, the client is able to manage her own content on the website.
 
 ## Jisun Kim Official Website Live Link
 
