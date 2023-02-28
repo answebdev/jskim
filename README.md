@@ -7,7 +7,7 @@ This is the official website I designed and built for a client, a Korean model w
 
 ## Jisun Kim Official Website Live Link
 
-Please check out the live link for iSounds Music here: [Jisun Kim Official Website](https://jisunkim.netlify.app/ "Jisun Kim Official Website")
+Please check out the live link for the Official Website here: [Jisun Kim Official Website](https://jisunkim.netlify.app/ "Jisun Kim Official Website")
 
 ## Table of Contents
 * [Technologies Used](#Technologies-Used)
@@ -17,18 +17,21 @@ Please check out the live link for iSounds Music here: [Jisun Kim Official Websi
 
 ## Technologies Used
 
-* React (Hooks)
-* TypeScript
+* React
+* Sanity CMS
 * React Router
 * React Helmet
 * React Bootstrap
-* The AudioDB API
-* Smoothscroll Polyfill
+* React Grid Gallery
+* React Transition Group
+* Lightbox2
+* Framer Motion
+* Material Icons
 * CSS (CSS Modules)
+* Animate CSS
 * Google Fonts
 * Font Awesome
 * Facebook Developer Tools (Sharing Debugger)
-* Canva
 * Netlify
 
 [Back To Top](#Table-of-Contents)
@@ -115,23 +118,14 @@ And the resulting album information looks like this:
 
 [Back To Top](#Table-of-Contents)
 
-## E2E Testing
-I used Cypress for end-to-end testing to ensure that the application's complete workflow functions properly. The tests were split up into three suites: endpoints, search functionality, and album details. In the first test suite, the endpoints used in the application were tested. In the second and third test suites, all of the features of the application's workflow were tested, such as searching for artists and going to the artist's album page, clicking on the description dropdown for albums, testing the Back To Top button, etc.
-
-In addition, I created a workflow using GitHub Actions to automate the testing so that the application always works as expected, which includes sending out notifications if any of the tests fail. I used both the `push` and `schedule` events. The `push` event is used so that the tests are run whenever any updates to the code are pushed to the respository to help ensure that nothing breaks unintentionally due to code changes. With the `schedule` event, the tests have been scheduled to run automatically once a week, also to help ensure that the application is always working as expected.
-
-https://user-images.githubusercontent.com/36783010/157349665-b69d9bd6-d74a-4189-a41a-8f6782ac7864.mp4
-
-[Back To Top](#Table-of-Contents)
-
 ## Screenshots
 
-![Screenshot 01](screenshots/isoundsmusic-screenshot01.png "iSounds Music")
+![Screenshot 01](screenshots/jk_screenshot_01.jpg "Landing Page")
 
-![Screenshot 02](screenshots/isoundsmusic-screenshot02.png "Artist Not Found Screen")
+![Screenshot 02](screenshots/jk_screenshot_02.jpg "About Page")
 
-<img src="screenshots/isoundsmusic-screenshot03.png" title="Preview of Link when Shared on Facebook" width="50%" height="auto">
+![Screenshot 01](screenshots/jk_screenshot_03.jpg "Image Gallery: Lightbox")
 
-<img src="screenshots/isoundsmusic-screenshot04.png" title="Preview of Link when Shared on LinkedIn" width="50%" height="auto">
+![Screenshot 02](screenshots/jk_screenshot_04.jpg "404 Page Not Found")
 
 [Back To Top](#Table-of-Contents)
