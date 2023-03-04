@@ -3,135 +3,105 @@
 
 ## Description
 
-This is the official website I designed and built for a client, a Korean model who wanted a website to showcase her modeling work and have a way for others to reach out to her for bookings or inquiries. By using the Sanity Content Management for the website, the client is able to manage her own content on the website.
+Official portfolio website I designed and built for a client, a Korean model who wanted a website to showcase her modeling work and have a way for others to reach out to her for bookings or inquiries with a contact form. By using the Sanity CMS for the website, the client is able to manage her own content on the website.
 
 ## Jisun Kim Official Website Live Link
 
-Please check out the live link for iSounds Music here: [Jisun Kim Official Website](https://jisunkim.netlify.app/ "Jisun Kim Official Website")
+Please check out the live link for the Official Website here: [Jisun Kim Official Website](https://jisunkim.netlify.app/ "Jisun Kim Official Website")
 
 ## Table of Contents
 * [Technologies Used](#Technologies-Used)
 * [Development](#Development)
-* [E2E Testing](#E2E-Testing)
 * [Screenshots](#Screenshots)
 
 ## Technologies Used
 
 * React (Hooks)
-* TypeScript
+* Sanity CMS
 * React Router
 * React Helmet
 * React Bootstrap
-* The AudioDB API
-* Smoothscroll Polyfill
+* React Grid Gallery
+* React Transition Group
+* Lightbox2
+* Framer Motion
+* Material Icons
 * CSS (CSS Modules)
+* Animate.css
 * Google Fonts
 * Font Awesome
 * Facebook Developer Tools (Sharing Debugger)
-* Canva
 * Netlify
 
 [Back To Top](#Table-of-Contents)
 
 ## Development
 
-iSounds Music fetches data from [The AudioDB API](https://www.theaudiodb.com/api_guide.php "The AudioDB API"). Two different endpoints were used: one endpoint to fetch artist details by name, and a second to fetch album details from the artists. Dynamic routing was set up so that when a user goes to an artist's page to view the album information, only that artist's album information will show in its own page with its own route and `id` in the URL. In addition, React Helmet was set up in such a way that the browser tab will display the particular artist's name when the user goes to the artist's album page. For example, if a user searches for Tom Waits, and then goes to Tom Waits's album page, the browser tab will show: "iSounds Music | Albums | Tom Waits".
+The client wanted a portfolio website with a clean design to showcase her modeling work, particulary a selection of photos and videos of her work, as well as a way for others to reach out to her for bookings or inquiries. In order for her to have complete control of her content, I built the website using Sanity, a Content Management System. That way, the client would be able to manage her website's content on her own (e.g., adding and deleting photos and videos, as well as updating and editing text, such as her bio and samples of work on the About Page).
 
-### Debouncing
+To enhance the showcasing of her photos, I used React Grid Gallery, an image gallery for React that has a design that fit with what the client wanted for the Photos Page. Since the client intends to have a number of photos on show, this gallery is exactly what she had in mind. Furthermore, I also added the use of Lightbox2 so that when a visitor to the site clicks on an image, you get a closer look at the clicked-on image while dimming and disabling the rest of the background, giving a stunning effect that goes well with the image gallery. For animations, I used Framer Motion in certain places, such as on the Landing Page, Photos Page, and Videos Page, for some nice animated effects.
 
-To prevent API calls from being fired on every keystroke, a debounce custom hook is used in conjunction with the useEffect hook to delay the API call until the user finishes typing. This ensures that expensive operations, as in the API calls here, are not executed too frequently. The improvement can be seen when looking at the Network tab in the console when making the API calls. In this first example, debouncing is not used. As you can see, API calls are being made with every keystroke. This can be clearly seen in the Network tab. In addition to causing issues with performance, having new information appear with every keystroke can be chaotic and inefficient.
+To build the website, I used Sanity so that the client would be able to add and fetch data from Sanity. Sanity uses GROQ, its own open-source query language, as well as schemas that I created. The following example is the GROQ query taken from the Videos Page component in `Videos.js`. The code is put inside a `useEffect` so that the data is fetched when the component loads so that it displays on the page. In this case, the videos (`videoUrl`). The `title` is also fetched. Here, however, the title is not disaplayed on the page. Rather, it is an attribute used to describe the contents of the frame. Finally, the collection here is sorted in descending (`desc`) order.
 
-![Screenshot 06](screenshots/withoutDebouncing.gif "Without Debouncing")
+```javascript
+  const [videoData, setVideoData] = useState(null);
+  
+  useEffect(() => {
+    sanityClient
+      .fetch(
+        `*[_type == "videos"] | order(_createdAt desc) {
+          videoUrl,
+          title
+        }`
+      )
+      .then((data) => setVideoData(data))
+      .catch(console.error);
+  }, []);
+  ```
 
-In comparison, you can see the improvement in the Network tab when debouncing is used. As you can see, although the same API call is being made (i.e., searching for "david bowie"), the API calls are not executed as frequently as when debouncing is not used. Instead of making API calls with every keystroke, the debounce hook forces the function that is fetching the data to wait a certain amount of time (500ms) before running again. The hook, then, limits the number of times the function is called. As you can see in the Network tab in the example below, this is much more efficient.
 
-![Screenshot 07](screenshots/withDebouncing.gif "With Debouncing")
+The following is the schema in `videos.js` that goes with the Videos Page component:
 
-### Smoothscroll Polyfill
+```javascript
+import {defineField, defineType} from 'sanity'
 
-The Albums page (`Artist.js`) containing all of the artist's albums has a "Back to Top" button with smooth scrolling. It has an `onClick` that calls the `scrollToTop` function, which enables the smooth scrolling behavior to the top of the page:
-
-```
-const scrollToTop = () => {
-  window.scrollTo({
-    top: 0,
-    behavior: 'smooth',
-  });
-};
-```
-
-Still, not all browsers support smooth scrolling (e.g., Safari). To address this, [smoothscroll polyfill](http://iamdustan.com/smoothscroll/ "smooth scroll behavior polyfill") was used so that the smooth scrolling behavior can be used in browsers that do not support smooth scrolling, as in the case with Safari. After installing and importing the polyfill, it was used in `Artist.js`, since this is where the "Back to Top" button is located. The first two lines come from the polyfill documentation and were added inside the `scrollToTop` function, which is called with the `onClick` whenever the "Back to Top" button is clicked:
-
-```
-const scrollToTop = () => {
-  smoothscroll.polyfill();
-  window.scroll({ top: 0, left: 0, behavior: 'smooth' })
-  window.scrollTo({
-    top: 0,
-    behavior: 'smooth',
-  });
-};
-```
-
-Before adding these two lines, although the user is able the scroll up in Safari, it would not be a smooth scrolling behavior. However, after adding these lines, the behavior in Safari when clicking the "Back to Top" button is now smooth.
-
-### Placeholder Images
-Placeholder images were created using Canva to act as placeholders in cases were there are no images provided in the API, specifically images used in the search results and for album covers:
-
-![Screenshot 08](screenshots/isoundsmusic-screenshot08.png "Placeholder Images Created for Application")
-
-A search result with no image would look like this:
-
-![Screenshot 09](screenshots/isoundsmusic-screenshot09.png "Search Result with No Image")
-
-I didn't like how it looked when no image was available, so I decided to create my own placeholder images, as stated above. To use the created placeholder image when needed, I imported the image into my `ArtistResults` component, then used a ternary operator where I render the image to conditionally render the placeholder images in the case where no image is available in the API, where `PlaceholderImg` is the name given to my imported image:
-
-```
-<Card.Img
-  src={ artist.strArtistWideThumb ? artist.strArtistWideThumb : PlaceholderImg }
-  alt={artist.strArtist}
-/>
-```
-The resulting search result with the placeholder image now looks like this:
-
-![Screenshot 10](screenshots/isoundsmusic-screenshot10.png "Search Result with Placeholder Image")
-
-Similarly, an album with no image looks like this on the page:
-
-![Screenshot 11](screenshots/isoundsmusic-screenshot11.png "Album with No Image")
-
-Again, a ternary operator was used with the imported placeholder image, this time in the `Artist` component:
+export default defineType({
+  name: 'videos',
+  title: 'Videos',
+  type: 'document',
+  fields: [
+    defineField({
+      name: 'videoUrl',
+      title: 'Video URL',
+      type: 'url',
+    }),
+    defineField({
+      name: 'title',
+      title: 'Title',
+      type: 'string',
+    }),
+  ],
+  preview: {
+    select: {
+      title: 'title',
+      author: 'author.name',
+      media: 'contactImage',
+    },
+  },
+})
 
 ```
-<Card.Img
-  src={item.strAlbumThumb ? item.strAlbumThumb : PlaceholderImg}
-  alt={item.strArtist}
-/>
-```
-
-And the resulting album information looks like this:
-
-![Screenshot 12](screenshots/isoundsmusic-screenshot12.png "Album with Placeholder Image")
-
-[Back To Top](#Table-of-Contents)
-
-## E2E Testing
-I used Cypress for end-to-end testing to ensure that the application's complete workflow functions properly. The tests were split up into three suites: endpoints, search functionality, and album details. In the first test suite, the endpoints used in the application were tested. In the second and third test suites, all of the features of the application's workflow were tested, such as searching for artists and going to the artist's album page, clicking on the description dropdown for albums, testing the Back To Top button, etc.
-
-In addition, I created a workflow using GitHub Actions to automate the testing so that the application always works as expected, which includes sending out notifications if any of the tests fail. I used both the `push` and `schedule` events. The `push` event is used so that the tests are run whenever any updates to the code are pushed to the respository to help ensure that nothing breaks unintentionally due to code changes. With the `schedule` event, the tests have been scheduled to run automatically once a week, also to help ensure that the application is always working as expected.
-
-https://user-images.githubusercontent.com/36783010/157349665-b69d9bd6-d74a-4189-a41a-8f6782ac7864.mp4
 
 [Back To Top](#Table-of-Contents)
 
 ## Screenshots
 
-![Screenshot 01](screenshots/isoundsmusic-screenshot01.png "iSounds Music")
+![Screenshot 01](screenshots/jk_screenshot_01.jpg "Landing Page")
 
-![Screenshot 02](screenshots/isoundsmusic-screenshot02.png "Artist Not Found Screen")
+![Screenshot 02](screenshots/jk_screenshot_02.jpg "About Page")
 
-<img src="screenshots/isoundsmusic-screenshot03.png" title="Preview of Link when Shared on Facebook" width="50%" height="auto">
+![Screenshot 01](screenshots/jk_screenshot_03.jpg "Closer look of image with Lightbox")
 
-<img src="screenshots/isoundsmusic-screenshot04.png" title="Preview of Link when Shared on LinkedIn" width="50%" height="auto">
+![Screenshot 02](screenshots/jk_screenshot_04.jpg "404 Page Not Found")
 
 [Back To Top](#Table-of-Contents)
