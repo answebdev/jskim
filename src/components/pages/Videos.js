@@ -40,21 +40,14 @@ const Videos = () => {
         />
         <script type='application/ld+json'>{`
         {
-          "@context": "https://schema.org",
-          "@type": "VideoObject",
-          "name": "Osaka",
-          "description": "Osaka",
-          "thumbnailUrl": "https://i.vimeocdn.com/video/1620680322-1459affedfbaeebdab77caa0f84329fc5fd3bb0c0c051ef5308d921d51a7f2d7-d_640",
-          "uploadDate": "2023-02-27 20:08:31",
-          "duration": "PT188S",
-          "contentUrl": "https://player.vimeo.com/video/802909824?h=37fa2e9cd3",
-          "embedUrl": "https://player.vimeo.com/video/802909824?h=37fa2e9cd3",
-          "interactionStatistic": {
-            "@type": "InteractionCounter",
-            "interactionType": { "@type": "WatchAction" },
-            "userInteractionCount": 5647018
-          },
-          "regionsAllowed": "US"
+            "@context": "http://schema.org",
+            "@type": "VideoObject",
+            "embedUrl": "https://player.vimeo.com/video/802909824?h=37fa2e9cd3",
+            "thumbnailUrl": "https://i.vimeocdn.com/video/1620680322-1459affedfbaeebdab77caa0f84329fc5fd3bb0c0c051ef5308d921d51a7f2d7-d_640",
+            "name": "Osaka.mp4",
+            "description": "Osaka",
+            "duration": "PT188S",
+            "uploadDate": "2023-02-27 20:08:31"
         }
     `}</script>
       </Helmet>
