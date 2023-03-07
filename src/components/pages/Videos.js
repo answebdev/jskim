@@ -46,8 +46,8 @@ const Videos = () => {
         /> */}
         <script type='application/ld+json'>
           {`
-            "@type": "VideoObject",
             "@context": "https://schema.org",
+            "@type": "VideoObject",
             "embedUrl":"https://player.vimeo.com/video/802908574?h=35d231015f",
             "thumbnailUrl":"https://i.vimeocdn.com/video/1620674454-3ef48c25a8d6e561b4399ff71cafcd3d38aa38bf8aa97c8746ac032f6560cdc8-d_640",
             "name":"Standard Chartered Bank 2021 Digital Wealth",
