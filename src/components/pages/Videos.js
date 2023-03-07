@@ -100,6 +100,12 @@ const Videos = () => {
                               height: '100%',
                             }}
                             title={item.title}
+                            description={item.title}
+                            name={item.title}
+                            uploadDate={item._createdAt}
+                            embedUrl={item.videoUrl}
+                            thumbnailUrl=''
+                            type='VideoObject'
                           ></iframe>
                         </div>
                       </div>
