@@ -43,7 +43,7 @@ const Videos = () => {
             "@context": "http://schema.org",
             "@type": "VideoObject",
             "embedUrl": "https://player.vimeo.com/video/802909824?h=37fa2e9cd3",
-            "thumbnailUrl": "https://answebdev.imgbb.com/",
+            "thumbnailUrl": "https://i.vimeocdn.com/video/1620680322-1459affedfbaeebdab77caa0f84329fc5fd3bb0c0c051ef5308d921d51a7f2d7-d_640",
             "name": "Osaka.mp4",
             "description": "Travel video of Jisun Kim in Osaka, Japan.",
             "duration": "PT188S",
