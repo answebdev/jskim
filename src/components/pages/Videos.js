@@ -54,7 +54,6 @@ const Videos = () => {
             "description":"",
             "duration":"PT72S",
             "uploadDate":"2023-02-27 20:02:48"
-            }]
           `}
         </script>
       </Helmet>
