@@ -38,6 +38,12 @@ const Videos = () => {
           property='og:description'
           content='Jisun Kim is a model from South Korea. Get to know her and view a selection of videos from various shoots, ranging from travel videos to commercials.'
         />
+        <script
+          type='application/ld+json'
+          dangerouslySetInnerHTML={{
+            __html: `{ "@context": "http://schema.org", "@type": "VideoObject", "embedUrl":{item.videoUrl},"thumbnailUrl":"","name":{item.title},"description":{item.title},"duration":"","uploadDate":{item._createdAt} }`,
+          }}
+        />
       </Helmet>
       <div className={classes.Container}>
         <Row>
@@ -100,12 +106,6 @@ const Videos = () => {
                               height: '100%',
                             }}
                             title={item.title}
-                            description={item.title}
-                            name={item.title}
-                            uploadDate={item._createdAt}
-                            embedUrl={item.videoUrl}
-                            thumbnailUrl=''
-                            type='VideoObject'
                           ></iframe>
                         </div>
                       </div>
