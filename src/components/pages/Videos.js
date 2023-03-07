@@ -38,12 +38,25 @@ const Videos = () => {
           property='og:description'
           content='Jisun Kim is a model from South Korea. Get to know her and view a selection of videos from various shoots, ranging from travel videos to commercials.'
         />
-        <script
+        {/* <script
           type='application/ld+json'
           dangerouslySetInnerHTML={{
-            __html: `{ "@context": "http://schema.org", "@type": "VideoObject", "embedUrl":{item.videoUrl},"thumbnailUrl":"","name":{item.title},"description":{item.title},"duration":"","uploadDate":{item._createdAt} }`,
+            __html: `{ "@context": "http://schema.org", "@type": "LocalBusiness", ... }`,
           }}
-        />
+        /> */}
+        <script type='application/ld+json'>
+          {`
+            "@type": "VideoObject",
+            "@context": "https://schema.org",
+            "embedUrl":"https://player.vimeo.com/video/802908574?h=35d231015f",
+            "thumbnailUrl":"https://i.vimeocdn.com/video/1620674454-3ef48c25a8d6e561b4399ff71cafcd3d38aa38bf8aa97c8746ac032f6560cdc8-d_640",
+            "name":"Standard Chartered Bank 2021 Digital Wealth",
+            "description":"",
+            "duration":"PT72S",
+            "uploadDate":"2023-02-27 20:02:48"
+            }]
+          `}
+        </script>
       </Helmet>
       <div className={classes.Container}>
         <Row>
