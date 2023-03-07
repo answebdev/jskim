@@ -23,28 +23,45 @@ const Videos = () => {
 
   return (
     <div>
-      <Helmet>
-        <title>Jisun Kim | Videos</title>
-        <meta
-          name='description'
-          content='Jisun Kim is a model from South Korea. Get to know her and view a selection of videos from various shoots, ranging from travel videos to commercials.'
-        />
-        <meta property='og:url' content='https://jisunkim.netlify.app/videos' />
-        <meta
-          property='og:title'
-          content='Jisun Kim Official Website | Videos'
-        />
-        <meta
-          property='og:description'
-          content='Jisun Kim is a model from South Korea. Get to know her and view a selection of videos from various shoots, ranging from travel videos to commercials.'
-        />
-        <script
+      {videoData.map((item) => (
+        <Helmet>
+          <title>Jisun Kim | Videos</title>
+          <meta
+            name='description'
+            content='Jisun Kim is a model from South Korea. Get to know her and view a selection of videos from various shoots, ranging from travel videos to commercials.'
+          />
+          <meta
+            property='og:url'
+            content='https://jisunkim.netlify.app/videos'
+          />
+          <meta
+            property='og:title'
+            content='Jisun Kim Official Website | Videos'
+          />
+          <meta
+            property='og:description'
+            content='Jisun Kim is a model from South Korea. Get to know her and view a selection of videos from various shoots, ranging from travel videos to commercials.'
+          />
+          {/* <script
           type='application/ld+json'
           dangerouslySetInnerHTML={{
             __html: `{ "@context": "http://schema.org", "@type": "VideoObject", "embedUrl":{item.videoUrl},"thumbnailUrl":"","name":{item.title},"description":{item.title},"duration":"","uploadDate":{item._createdAt} }`,
           }}
-        />
-      </Helmet>
+        /> */}
+          <script type='application/ld+json'>{`
+            {
+              "@context": "http://schema.org",
+              "@type": "VideoObject",
+              "embedUrl": "${item.videoUrl}",
+              "thumbnailUrl": "",
+              "name": "${item.title}",
+              "description": "${item.title}",
+              "duration": "",
+              "uploadDate": "${item._createdAt}"
+            }
+      `}</script>
+        </Helmet>
+      ))}
       <div className={classes.Container}>
         <Row>
           <Col md={12}>
