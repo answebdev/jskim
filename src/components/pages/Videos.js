@@ -38,7 +38,7 @@ const Videos = () => {
           property='og:description'
           content='Jisun Kim is a model from South Korea. Get to know her and view a selection of videos from various shoots, ranging from travel videos to commercials.'
         />
-        <script type='application/ld+json'>{`
+        {/* <script type='application/ld+json'>{`
         {
             "@context": "http://schema.org",
             "@type":"VideoObject",
@@ -49,7 +49,7 @@ const Videos = () => {
             "duration": "PT72S",
             "uploadDate": "2023-02-27 20:02:48"
         }
-    `}</script>
+    `}</script> */}
       </Helmet>
       <div className={classes.Container}>
         <Row>
