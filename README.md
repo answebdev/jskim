@@ -27,6 +27,7 @@ Please check out the live link for the Official Website here: [Jisun Kim Officia
 * Framer Motion
 * Material Icons
 * CSS (CSS Modules)
+* Flexbox
 * Animate.css
 * Google Fonts
 * Font Awesome
